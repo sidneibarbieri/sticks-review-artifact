@@ -1,5 +1,5 @@
 {
-  "bundle": "sticks/data/stix/enterprise-attack.json",
+  "bundle": "sticks-docker/sticks/data/stix/enterprise-attack.json",
   "docker_execution": "sticks-docker/measurement/results/docker_caldera_execution_latest.json",
   "docker_findings": "sticks-docker/measurement/results/docker_execution_findings_latest.json",
   "active_attack_patterns": 691,

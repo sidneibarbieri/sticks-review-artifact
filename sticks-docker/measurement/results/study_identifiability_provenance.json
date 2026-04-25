@@ -1,5 +1,5 @@
 {
-  "bundle_path": "sticks/data/stix/enterprise-attack.json",
+  "bundle_path": "sticks-docker/sticks/data/stix/enterprise-attack.json",
   "methodology": {
     "task": "Positive-evidence identifiability over ATT&CK technique profiles.",
     "definition": "A profile is distinguishable when there exists a subset of its techniques such that no other profile in the same corpus contains all techniques in that subset.",

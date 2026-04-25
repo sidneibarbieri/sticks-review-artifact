@@ -357,7 +357,7 @@ def test_build_container_port_check_command_uses_docker_exec() -> None:
     assert ":8116 " in command[-1]
 
 
-def test_wait_for_shared_substrate_retries_until_all_ports_ready(monkeypatch) -> None:
+def test_wait_for_shared_substrate_retries_until_all_checks_ready(monkeypatch) -> None:
     attempts = {"count": 0}
 
     def fake_container_ports_ready(container_name: str, ports: tuple[int, ...]) -> bool:
@@ -367,6 +367,7 @@ def test_wait_for_shared_substrate_retries_until_all_ports_ready(monkeypatch) ->
         return True
 
     monkeypatch.setattr(module, "container_ports_ready", fake_container_ports_ready)
+    monkeypatch.setattr(module, "substrate_smoke_test_ready", lambda _: True)
     monkeypatch.setattr(module.time, "sleep", lambda _: None)
 
     module.wait_for_shared_substrate(timeout_seconds=1, poll_interval_seconds=0)

@@ -207,8 +207,8 @@ def collect_files():
     for f in collected:
         try:
             shutil.copy2(f, dest_dir)
-        except Exception:
-            pass
+        except OSError:
+            continue
 
 def job():
     collect_files()

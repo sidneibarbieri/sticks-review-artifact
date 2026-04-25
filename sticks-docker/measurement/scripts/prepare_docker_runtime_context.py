@@ -91,10 +91,8 @@ SHADOWRAY_TOOL_ABILITY_ID = "5c0eccee-eee4-5d88-b6e5-shadowray"
 def display_path(path: Path) -> str:
     path = path.resolve()
     for root in (WORKSPACE_ROOT, MEASUREMENT_ROOT):
-        try:
+        if path.is_relative_to(root):
             return path.relative_to(root).as_posix()
-        except ValueError:
-            pass
     for marker in ("docker-context", "curated-api", "sticks-docker", "sticks", "results"):
         if marker in path.parts:
             index = path.parts.index(marker)
@@ -158,9 +156,9 @@ def ensure_caldera_runtime_config(output_dir: Path) -> list[Path]:
             "bootstrap_abilities: []\n"
             "deadman_abilities: []\n"
             "implant_name: sandcat.go\n"
-            "sleep_max: 60\n"
-            "sleep_min: 30\n"
-            "untrusted_timer: 90\n"
+            "sleep_max: 3\n"
+            "sleep_min: 3\n"
+            "untrusted_timer: 30\n"
             "watchdog: 0\n"
             "deployments: []\n"
         ),

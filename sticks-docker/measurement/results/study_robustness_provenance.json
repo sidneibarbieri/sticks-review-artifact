@@ -45,7 +45,7 @@
       }
     }
   },
-  "bundle_path": "sticks/data/stix/enterprise-attack.json",
+  "bundle_path": "sticks-docker/sticks/data/stix/enterprise-attack.json",
   "campaign_intrusion_overlap": {
     "campaign_in_set_pct": {
       "max": 76.5,

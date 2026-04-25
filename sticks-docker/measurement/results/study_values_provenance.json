@@ -1,5 +1,5 @@
 {
-  "bundle_path": "sticks/data/stix/enterprise-attack.json",
+  "bundle_path": "sticks-docker/sticks/data/stix/enterprise-attack.json",
   "macro_values": {
     "nCampaignsTotal": "52",
     "nCampaigns": "51",

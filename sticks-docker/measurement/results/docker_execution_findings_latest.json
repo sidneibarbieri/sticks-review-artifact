@@ -30,7 +30,7 @@
     "shared_substrate_model": true
   },
   "execution": {
-    "effective_quiescent_seconds": 120,
+    "effective_quiescent_seconds": 30,
     "explicit_end_markers": 8,
     "operations_total": 8,
     "operations_with_failed_links": 0,
@@ -166,7 +166,7 @@
     "total_pending_links": 0,
     "total_successful_links": 109
   },
-  "paper_takeaways": [
+  "reproducibility_takeaways": [
     "The Docker artifact executes all curated campaigns inside one shared pre-composed substrate, not one isolated SUT per campaign.",
     "For this legacy Caldera path, executed work is visible in operation.chain even when operation.steps remains empty.",
     "Reproducibility depends on runtime repair outside the frozen artifact: missing executable bits, missing Caldera conf files, and host-aware bootstrap adjustments are required for clean replay on a fresh ARM64 host.",

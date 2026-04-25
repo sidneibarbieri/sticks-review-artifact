@@ -32,10 +32,8 @@ PROVENANCE_JSON = MEASUREMENT_ROOT / "results" / "supplementary_provenance.json"
 
 def display_path(path: Path) -> str:
     for root in (WORKSPACE_ROOT, MEASUREMENT_ROOT):
-        try:
+        if path.is_relative_to(root):
             return path.relative_to(root).as_posix()
-        except ValueError:
-            pass
     return path.as_posix()
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Create a venue-neutral reproducibility artifact for the procedural study.
+Create a self-contained reproducibility artifact for the procedural study.
 
 The staged artifact preserves the frozen Docker-backed execution boundary while
 excluding workspace residue, historical result archives, and reviewer-irrelevant
@@ -149,6 +149,9 @@ def stage_frozen_artifact(dest_root: Path) -> None:
     copy_tree(STICKS_DOCKER_ROOT / "docker" / ".docker" / "kali", docker_dest / ".docker" / "kali")
     copy_tree(STICKS_DOCKER_ROOT / "docker" / ".docker" / "db", docker_dest / ".docker" / "db")
 
+    remove_if_exists(docker_dest / ".docker" / "caldera" / "plugins" / "ssl")
+    remove_if_exists(docker_dest / ".docker" / "caldera" / "plugins" / "debrief" / "docs")
+
     empty_directory(docker_dest / ".docker" / "db" / "dbdata")
     empty_directory(docker_dest / "kali-data")
     remove_if_exists(docker_dest / ".docker" / "nginx" / "var" / "www" / "html" / "tmp")
@@ -226,7 +229,6 @@ def write_artifact_docs(dest_root: Path) -> None:
                 "* text=auto eol=lf",
                 "*.sh text eol=lf",
                 "*.py text eol=lf",
-                "*.tex text eol=lf",
                 "*.yml text eol=lf",
                 "*.yaml text eol=lf",
                 "",

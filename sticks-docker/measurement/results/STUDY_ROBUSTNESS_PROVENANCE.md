@@ -1,6 +1,6 @@
 # Study Robustness Provenance
 
-- Bundle: `sticks/data/stix/enterprise-attack.json`
+- Bundle: `sticks-docker/sticks/data/stix/enterprise-attack.json`
 
 ## Alternative Binary-Distance Clustering
 

@@ -1,6 +1,6 @@
 # Docker Caldera Execution Audit
 
-- Generated at: `2026-04-25T19:47:07+00:00`
+- Generated at: `2026-04-25T23:18:41+00:00`
 - Caldera URL: `http://127.0.0.1:8888`
 - Curated abilities loaded: `8`
 - Curated adversaries loaded: `8`
@@ -8,7 +8,7 @@
 - Operations observed: `8`
 - Poll timeout reached: `False`
 - Quiescent plateau reached: `True`
-- Effective quiescent window (s): `120`
+- Effective quiescent window (s): `30`
 
 ## Operation States
 

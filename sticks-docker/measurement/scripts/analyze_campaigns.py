@@ -345,10 +345,9 @@ def format_decimal(value: float, digits: int) -> str:
 
 
 def display_path(path: Path) -> str:
-    try:
+    if path.is_relative_to(WORKSPACE_ROOT):
         return str(path.relative_to(WORKSPACE_ROOT))
-    except ValueError:
-        return str(path)
+    return str(path)
 
 
 def collect_campaign_data(

@@ -39,7 +39,7 @@ DEFAULT_GROUP = "red"
 DEFAULT_AGENT_TIMEOUT = 300
 DEFAULT_OPERATION_TIMEOUT = 2400
 DEFAULT_POLL_INTERVAL = 5
-DEFAULT_QUIESCENT_SECONDS = 120
+DEFAULT_QUIESCENT_SECONDS = 30
 DEFAULT_SUBSTRATE_TIMEOUT = 900
 DEFAULT_SUBSTRATE_POLL_INTERVAL = 5
 DEFAULT_IMPORT_RETRIES = 3
@@ -56,15 +56,27 @@ SUBSTRATE_PORT_REQUIREMENTS = {
     "nginx": (22, 5055, 8080, 8116),
     "db": (22, 80),
 }
+SUBSTRATE_SMOKE_TEST_COMMANDS = (
+    "curl -fsS -m 5 http://172.21.0.20/ >/dev/null",
+    "dig @172.21.0.20 hostb.dynamic.local A +short | grep -q '172.22.0.20'",
+    (
+        "sshpass -p 'Passw0rd' ssh -o StrictHostKeyChecking=no "
+        "-o ConnectTimeout=5 attacker@172.21.0.20 'echo ready' | grep -q ready"
+    ),
+    "smbclient //172.21.0.20/share -U DebianUser%DebianUser -c 'dir' | grep -q fake_service.sh",
+    (
+        "curl -fsS -m 5 -X POST -F 'cmd=whoami' "
+        "http://172.21.0.20:5055/exec | grep -Eq 'www-data|root|attacker'"
+    ),
+    "mysql -h 172.21.0.20 -u attacker -pAttack3rPass -e 'SELECT 1' >/dev/null",
+)
 
 
 def display_path(path: Path) -> str:
     path = path.resolve()
     for root in (WORKSPACE_ROOT, MEASUREMENT_ROOT):
-        try:
+        if path.is_relative_to(root):
             return path.relative_to(root).as_posix()
-        except ValueError:
-            pass
     for marker in ("curated-api", "docker-context", "sticks-docker", "results"):
         if marker in path.parts:
             index = path.parts.index(marker)
@@ -290,20 +302,35 @@ def container_ports_ready(container_name: str, ports: tuple[int, ...]) -> bool:
     return completed.returncode == 0
 
 
+def substrate_smoke_test_ready(command: str) -> bool:
+    completed = run_host_tool(["docker", "exec", "kali", "sh", "-lc", command])
+    return completed.returncode == 0
+
+
+def shared_substrate_ready() -> bool:
+    ports_ready = all(
+        container_ports_ready(container_name, ports)
+        for container_name, ports in SUBSTRATE_PORT_REQUIREMENTS.items()
+    )
+    if not ports_ready:
+        return False
+    return all(
+        substrate_smoke_test_ready(command)
+        for command in SUBSTRATE_SMOKE_TEST_COMMANDS
+    )
+
+
 def wait_for_shared_substrate(
     timeout_seconds: int,
     poll_interval_seconds: int,
 ) -> None:
     deadline = time.time() + timeout_seconds
     while time.time() < deadline:
-        if all(
-            container_ports_ready(container_name, ports)
-            for container_name, ports in SUBSTRATE_PORT_REQUIREMENTS.items()
-        ):
+        if shared_substrate_ready():
             return
         time.sleep(poll_interval_seconds)
     raise TimeoutError(
-        "Docker shared substrate did not expose all required campaign services "
+        "Docker shared substrate did not pass required service readiness checks "
         f"within {timeout_seconds} seconds."
     )
 
@@ -625,6 +652,19 @@ def operations_fingerprint(operations: list[dict[str, Any]]) -> tuple[tuple[Any,
     )
 
 
+def filter_operations_by_name(
+    operations: list[dict[str, Any]],
+    operation_names: set[str] | None,
+) -> list[dict[str, Any]]:
+    if operation_names is None:
+        return operations
+    return [
+        operation
+        for operation in operations
+        if str(operation.get("name", "")) in operation_names
+    ]
+
+
 def operations_are_quiescent(
     operations: list[dict[str, Any]],
     previous_fingerprint: tuple[tuple[Any, ...], ...] | None,
@@ -673,13 +713,15 @@ def poll_operations(
     timeout_seconds: int,
     poll_interval_seconds: int,
     quiescent_seconds: int,
+    operation_names: set[str] | None = None,
 ) -> tuple[list[dict[str, Any]], bool, bool]:
     deadline = time.time() + timeout_seconds
     last_operations: list[dict[str, Any]] = []
     previous_fingerprint: tuple[tuple[Any, ...], ...] | None = None
     stable_seconds = 0
     while time.time() < deadline:
-        last_operations = api_get_json(base_url, api_key, "/api/v2/operations")
+        all_operations = api_get_json(base_url, api_key, "/api/v2/operations")
+        last_operations = filter_operations_by_name(all_operations, operation_names)
         if last_operations and all(
             str(operation.get("state", "")).lower() in TERMINAL_OPERATION_STATES
             for operation in last_operations
@@ -695,6 +737,59 @@ def poll_operations(
         previous_fingerprint = current_fingerprint
         time.sleep(poll_interval_seconds)
     return last_operations, True, False
+
+
+def create_and_poll_curated_operations(
+    loaded_adversaries: list[dict[str, str]],
+    group_name: str,
+    base_url: str,
+    api_key: str,
+    operation_timeout: int,
+    poll_interval: int,
+    quiescent_seconds: int,
+) -> tuple[list[dict[str, str]], list[dict[str, Any]], bool, bool]:
+    creation_log: list[dict[str, str]] = []
+    operations_by_name: dict[str, dict[str, Any]] = {}
+    any_timeout = False
+    all_reached_plateau = True
+
+    for index, adversary in enumerate(loaded_adversaries, start=1):
+        operation_name = f"OP{index:03d}"
+        completed = create_operation(
+            base_url=base_url,
+            api_key=api_key,
+            operation_name=operation_name,
+            group_name=group_name,
+            adversary_id=adversary["adversary_id"],
+        )
+        creation_log.append(
+            {
+                "operation_name": operation_name,
+                "adversary_name": adversary["name"],
+                "adversary_id": adversary["adversary_id"],
+                "stdout": completed.stdout.strip(),
+                "stderr": completed.stderr.strip(),
+            }
+        )
+        observed_operations, timed_out, quiescent = poll_operations(
+            base_url,
+            api_key,
+            operation_timeout,
+            poll_interval,
+            quiescent_seconds,
+            operation_names={operation_name},
+        )
+        any_timeout = any_timeout or timed_out
+        all_reached_plateau = all_reached_plateau and (quiescent or bool(observed_operations))
+        for operation in observed_operations:
+            operations_by_name[str(operation.get("name"))] = operation
+
+    return (
+        creation_log,
+        [operations_by_name[name] for name in sorted(operations_by_name)],
+        any_timeout,
+        all_reached_plateau,
+    )
 
 
 def render_markdown_summary(payload: dict[str, Any]) -> str:
@@ -836,18 +931,19 @@ def main() -> None:
         artifacts,
     )
     loaded_adversaries = extract_loaded_adversaries(artifacts, load_log)
-    operation_creation = create_curated_operations(
-        loaded_adversaries,
-        arguments.group,
-        arguments.caldera_url,
-        arguments.api_key,
-    )
-    operations, poll_timeout_reached, quiescent_plateau_reached = poll_operations(
-        arguments.caldera_url,
-        arguments.api_key,
-        arguments.operation_timeout,
-        arguments.poll_interval,
-        effective_quiescent_seconds,
+    (
+        operation_creation,
+        operations,
+        poll_timeout_reached,
+        quiescent_plateau_reached,
+    ) = create_and_poll_curated_operations(
+        loaded_adversaries=loaded_adversaries,
+        group_name=arguments.group,
+        base_url=arguments.caldera_url,
+        api_key=arguments.api_key,
+        operation_timeout=arguments.operation_timeout,
+        poll_interval=arguments.poll_interval,
+        quiescent_seconds=effective_quiescent_seconds,
     )
 
     payload = {

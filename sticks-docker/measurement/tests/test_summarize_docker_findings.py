@@ -177,7 +177,7 @@ def test_render_markdown_mentions_nonzero_link_details() -> None:
                     }
                 ],
             },
-            "paper_takeaways": ["One takeaway."],
+            "reproducibility_takeaways": ["One takeaway."],
         }
     )
 

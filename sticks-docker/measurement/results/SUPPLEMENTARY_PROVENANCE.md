@@ -1,6 +1,6 @@
 # Supplementary Measurement Provenance
 
-- Bundle: `sticks/data/stix/enterprise-attack.json`
+- Bundle: `sticks-docker/sticks/data/stix/enterprise-attack.json`
 - Docker execution report: `sticks-docker/measurement/results/docker_caldera_execution_latest.json`
 - Docker findings report: `sticks-docker/measurement/results/docker_execution_findings_latest.json`
 - Active Enterprise attack-patterns: `691`

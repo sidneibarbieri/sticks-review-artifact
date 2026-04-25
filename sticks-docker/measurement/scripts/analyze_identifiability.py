@@ -48,10 +48,8 @@ OUTPUT_MD = MEASUREMENT_ROOT / "results" / "STUDY_IDENTIFIABILITY_PROVENANCE.md"
 
 def display_path(path: Path) -> str:
     for root in (WORKSPACE_ROOT, MEASUREMENT_ROOT):
-        try:
+        if path.is_relative_to(root):
             return path.relative_to(root).as_posix()
-        except ValueError:
-            pass
     return path.as_posix()
 
 

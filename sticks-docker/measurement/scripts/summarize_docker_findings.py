@@ -26,10 +26,8 @@ LATEST_MD = RESULTS_DIR / "DOCKER_EXECUTION_FINDINGS_LATEST.md"
 def display_path(path: Path) -> str:
     path = path.resolve()
     for root in (STICKS_DOCKER_ROOT.parent, MEASUREMENT_ROOT):
-        try:
+        if path.is_relative_to(root):
             return path.relative_to(root).as_posix()
-        except ValueError:
-            pass
     for marker in ("docker-context", "curated-api", "sticks-docker", "results"):
         if marker in path.parts:
             index = path.parts.index(marker)
@@ -199,7 +197,7 @@ def build_findings_payload() -> dict[str, Any]:
             "explicit_end_markers": explicit_end_markers,
             **execution_summary,
         },
-        "paper_takeaways": [
+        "reproducibility_takeaways": [
             "The Docker artifact executes all curated campaigns inside one shared pre-composed substrate, not one isolated SUT per campaign.",
             "For this legacy Caldera path, executed work is visible in operation.chain even when operation.steps remains empty.",
             "Reproducibility depends on runtime repair outside the frozen artifact: missing executable bits, missing Caldera conf files, and host-aware bootstrap adjustments are required for clean replay on a fresh ARM64 host.",
@@ -259,8 +257,8 @@ def render_markdown(payload: dict[str, Any]) -> str:
         if operation.get("nonzero_links"):
             lines.append("")
 
-    lines.extend(["## Paper Takeaways", ""])
-    for takeaway in payload["paper_takeaways"]:
+    lines.extend(["## Reproducibility Takeaways", ""])
+    for takeaway in payload["reproducibility_takeaways"]:
         lines.append(f"- {takeaway}")
 
     return "\n".join(lines).rstrip() + "\n"
