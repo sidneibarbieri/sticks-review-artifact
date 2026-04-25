@@ -1,0 +1,5601 @@
+{
+  "bundle_path": "sticks/data/stix/enterprise-attack.json",
+  "methodology": {
+    "task": "Positive-evidence identifiability over ATT&CK technique profiles.",
+    "definition": "A profile is distinguishable when there exists a subset of its techniques such that no other profile in the same corpus contains all techniques in that subset.",
+    "impossible_case": "A profile is impossible to distinguish by positive technique evidence alone when some other profile subsumes it, i.e., contains every technique assigned to the focal profile.",
+    "minimum_witness": "The minimum witness is the smallest distinguishing subset of techniques for a profile under the positive-evidence model."
+  },
+  "campaigns": {
+    "label": "campaign",
+    "profile_count": 51,
+    "profile_size_stats": {
+      "min": 4,
+      "mean": 19.98,
+      "median": 17,
+      "max": 71
+    },
+    "distinguishable_count": 51,
+    "distinguishable_pct": 100.0,
+    "impossible_count": 0,
+    "impossible_pct": 0.0,
+    "witness_distribution": {
+      "1": 39,
+      "2": 11,
+      "3": 1
+    },
+    "threshold_curve": [
+      {
+        "min_profile_technique_count": 1,
+        "sample_size": 51,
+        "identifiable_count": 51,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 2,
+        "sample_size": 51,
+        "identifiable_count": 51,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 3,
+        "sample_size": 51,
+        "identifiable_count": 51,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 4,
+        "sample_size": 51,
+        "identifiable_count": 51,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 5,
+        "sample_size": 48,
+        "identifiable_count": 48,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 6,
+        "sample_size": 47,
+        "identifiable_count": 47,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 7,
+        "sample_size": 45,
+        "identifiable_count": 45,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 8,
+        "sample_size": 45,
+        "identifiable_count": 45,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 9,
+        "sample_size": 40,
+        "identifiable_count": 40,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 10,
+        "sample_size": 39,
+        "identifiable_count": 39,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 11,
+        "sample_size": 34,
+        "identifiable_count": 34,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 12,
+        "sample_size": 34,
+        "identifiable_count": 34,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 13,
+        "sample_size": 34,
+        "identifiable_count": 34,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 14,
+        "sample_size": 33,
+        "identifiable_count": 33,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 15,
+        "sample_size": 31,
+        "identifiable_count": 31,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 16,
+        "sample_size": 29,
+        "identifiable_count": 29,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 17,
+        "sample_size": 29,
+        "identifiable_count": 29,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 18,
+        "sample_size": 24,
+        "identifiable_count": 24,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 19,
+        "sample_size": 22,
+        "identifiable_count": 22,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 20,
+        "sample_size": 21,
+        "identifiable_count": 21,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 21,
+        "sample_size": 20,
+        "identifiable_count": 20,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 22,
+        "sample_size": 19,
+        "identifiable_count": 19,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 23,
+        "sample_size": 17,
+        "identifiable_count": 17,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 24,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 25,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 26,
+        "sample_size": 14,
+        "identifiable_count": 14,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 27,
+        "sample_size": 12,
+        "identifiable_count": 12,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 28,
+        "sample_size": 11,
+        "identifiable_count": 11,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 29,
+        "sample_size": 9,
+        "identifiable_count": 9,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 30,
+        "sample_size": 7,
+        "identifiable_count": 7,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 31,
+        "sample_size": 7,
+        "identifiable_count": 7,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 32,
+        "sample_size": 6,
+        "identifiable_count": 6,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 33,
+        "sample_size": 6,
+        "identifiable_count": 6,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 34,
+        "sample_size": 5,
+        "identifiable_count": 5,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 35,
+        "sample_size": 4,
+        "identifiable_count": 4,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 36,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 37,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 38,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 39,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 40,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 41,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 42,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 43,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 44,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 45,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 46,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 47,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 48,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 49,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 50,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 51,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 52,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 53,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 54,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 55,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 56,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 57,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 58,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 59,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 60,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 61,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 62,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 63,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 64,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 65,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 66,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 67,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 68,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 69,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 70,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 71,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      }
+    ],
+    "rows": [
+      {
+        "id": "campaign--46421788-b6e1-4256-b351-f8beffd1afba",
+        "name": "2015 Ukraine Electric Power Attack",
+        "technique_count": 17,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.011",
+          "T1136.002"
+        ],
+        "witness_technique_names": [
+          "Rundll32",
+          "Domain Account"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--aa73efef-1418-4dbe-b43c-87a498e97234",
+        "name": "2016 Ukraine Electric Power Attack",
+        "technique_count": 21,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1098"
+        ],
+        "witness_technique_names": [
+          "Account Manipulation"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--df8eb785-70f8-4300-b444-277ba849083d",
+        "name": "2022 Ukraine Electric Power Attack",
+        "technique_count": 10,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1485"
+        ],
+        "witness_technique_names": [
+          "Data Destruction"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4fd53ccc-c6b1-4e3c-abe8-a456d46d789e",
+        "name": "3CX Supply Chain Attack",
+        "technique_count": 22,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1218.015"
+        ],
+        "witness_technique_names": [
+          "Electron Applications"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--a010610e-22cb-437e-bfde-b78861bdca7a",
+        "name": "APT28 Nearest Neighbor Campaign",
+        "technique_count": 18,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1006"
+        ],
+        "witness_technique_names": [
+          "Direct Volume Access"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--add4d9de-1256-4166-83b8-57087288dced",
+        "name": "APT41 DUST",
+        "technique_count": 23,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1583.007"
+        ],
+        "witness_technique_names": [
+          "Serverless"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--a543ef15-91ea-4aa9-9c10-267d56e1ee82",
+        "name": "ArcaneDoor",
+        "technique_count": 25,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1037"
+        ],
+        "witness_technique_names": [
+          "Boot or Logon Initialization Scripts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--ab747e62-1bcb-479f-a26b-1cd39d413d81",
+        "name": "C0010",
+        "technique_count": 9,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1608.004"
+        ],
+        "witness_technique_names": [
+          "Drive-by Target"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--b4e5a4a9-f3be-4631-ba8f-da6ebb067fac",
+        "name": "C0011",
+        "technique_count": 8,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1587.003",
+          "T1204.002"
+        ],
+        "witness_technique_names": [
+          "Digital Certificates",
+          "Malicious File"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--78068e68-4124-4243-b6f4-76e4e5be8a06",
+        "name": "C0015",
+        "technique_count": 34,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1039"
+        ],
+        "witness_technique_names": [
+          "Data from Network Shared Drive"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--ba6dfa37-f401-4140-88b0-8938f2895e61",
+        "name": "C0017",
+        "technique_count": 29,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1560.003"
+        ],
+        "witness_technique_names": [
+          "Archive via Custom Method"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--519ee082-8ab6-439b-988f-a8a3f02c8d30",
+        "name": "C0018",
+        "technique_count": 19,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1072"
+        ],
+        "witness_technique_names": [
+          "Software Deployment Tools"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--712e38c3-a656-426a-9b3b-a6bfb63294c6",
+        "name": "C0021",
+        "technique_count": 15,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.011",
+          "T1027.009"
+        ],
+        "witness_technique_names": [
+          "Rundll32",
+          "Embedded Payloads"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--c89fa3ff-4773-4daf-8aec-d8f43f10116e",
+        "name": "C0026",
+        "technique_count": 6,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1030"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Data Transfer Size Limits"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--df74f7ad-b10d-431c-9f1d-a2bc18dadefa",
+        "name": "C0027",
+        "technique_count": 28,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1213.002"
+        ],
+        "witness_technique_names": [
+          "Sharepoint"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--7ec2826c-0bf0-4b47-acae-fd683431a4ca",
+        "name": "C0032",
+        "technique_count": 17,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1546.012"
+        ],
+        "witness_technique_names": [
+          "Image File Execution Options Injection"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--f9cc545e-b0ef-4b92-8884-a3a4427609f6",
+        "name": "CostaRicto",
+        "technique_count": 10,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1583.001",
+          "T1090.003"
+        ],
+        "witness_technique_names": [
+          "Domains",
+          "Multi-hop Proxy"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4fdd2487-26c1-494e-8702-ec5abe9aa1d9",
+        "name": "Cutting Edge",
+        "technique_count": 31,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1071.004"
+        ],
+        "witness_technique_names": [
+          "DNS"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--f494272a-c110-4574-be90-42c4957f7ae7",
+        "name": "FLORAHOX Activity",
+        "technique_count": 6,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1059",
+          "T1090.003"
+        ],
+        "witness_technique_names": [
+          "Command and Scripting Interpreter",
+          "Multi-hop Proxy"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--26d9ebae-de59-427f-ae9a-349456bae4b1",
+        "name": "Frankenstein",
+        "technique_count": 27,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1127.001"
+        ],
+        "witness_technique_names": [
+          "MSBuild"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--1169ff24-b35f-4d8d-8cf3-643a2834227f",
+        "name": "FrostyGoop Incident",
+        "technique_count": 5,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1071"
+        ],
+        "witness_technique_names": [
+          "Application Layer Protocol"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--8d2bc130-89fe-466e-a4f9-6bce6129c2b8",
+        "name": "FunnyDream",
+        "technique_count": 14,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1583.001",
+          "T1049"
+        ],
+        "witness_technique_names": [
+          "Domains",
+          "System Network Connections Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--7e21077d-2589-43a7-a5f9-490061289526",
+        "name": "HomeLand Justice",
+        "technique_count": 25,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1561.002"
+        ],
+        "witness_technique_names": [
+          "Disk Structure Wipe"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4b7f9839-4822-4c19-8a1f-70bb61ba97e1",
+        "name": "Indian Critical Infrastructure Intrusions",
+        "technique_count": 8,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1599"
+        ],
+        "witness_technique_names": [
+          "Network Boundary Bridging"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--58c4fd17-88f5-433a-8242-e9cac31f3c45",
+        "name": "J-magic Campaign",
+        "technique_count": 4,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1036.005",
+          "T1587.003"
+        ],
+        "witness_technique_names": [
+          "Match Legitimate Resource Name or Location",
+          "Digital Certificates"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--7ab2f1a1-26af-4204-ad84-d640fde391da",
+        "name": "Juicy Mix",
+        "technique_count": 14,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1132.001"
+        ],
+        "witness_technique_names": [
+          "Standard Encoding"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--0c259854-4044-4f6c-ac49-118d484b3e3b",
+        "name": "KV Botnet Activity",
+        "technique_count": 20,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1222.002"
+        ],
+        "witness_technique_names": [
+          "Linux and Mac File and Directory Permissions Modification"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--b66bc597-399c-4e4d-828a-1ed4a7f1fb15",
+        "name": "Leviathan Australian Intrusions",
+        "technique_count": 26,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1615"
+        ],
+        "witness_technique_names": [
+          "Group Policy Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--ae407e32-87e0-4d92-8705-3ae25d504d8a",
+        "name": "Night Dragon",
+        "technique_count": 29,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1110.002"
+        ],
+        "witness_technique_names": [
+          "Password Cracking"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--93c23946-49af-41f4-ac03-40f9ffc7419b",
+        "name": "Operation CuckooBees",
+        "technique_count": 33,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1087.001"
+        ],
+        "witness_technique_names": [
+          "Local Account"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--0257b35b-93ef-4a70-80dd-ad5258e6045b",
+        "name": "Operation Dream Job",
+        "technique_count": 55,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1587.002"
+        ],
+        "witness_technique_names": [
+          "Code Signing Certificates"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4603cf2f-06d0-4970-9c5d-5071b08c817f",
+        "name": "Operation Dust Storm",
+        "technique_count": 17,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1218.005"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Mshta"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--7854c1a0-f06c-4876-98a4-4bbd34751b05",
+        "name": "Operation Ghost",
+        "technique_count": 8,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1102.002"
+        ],
+        "witness_technique_names": [
+          "Bidirectional Communication"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4553292d-12c6-4a93-934d-12160370d4e0",
+        "name": "Operation Honeybee",
+        "technique_count": 28,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1548.002"
+        ],
+        "witness_technique_names": [
+          "Bypass User Account Control"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--455b011a-2510-49ab-a96f-2f84d6a80189",
+        "name": "Operation MidnightEclipse",
+        "technique_count": 17,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1053.003"
+        ],
+        "witness_technique_names": [
+          "Cron"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--37764c78-2a99-46d1-a7ea-6454b9bf93a0",
+        "name": "Operation Sharpshooter",
+        "technique_count": 13,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1559.002"
+        ],
+        "witness_technique_names": [
+          "Dynamic Data Exchange"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4c840263-bbda-440d-a22b-674679ddebf1",
+        "name": "Operation Spalax",
+        "technique_count": 17,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1497"
+        ],
+        "witness_technique_names": [
+          "Virtualization/Sandbox Evasion"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--b03d5112-e23a-4ac8-add0-be7502d24eff",
+        "name": "Operation Wocao",
+        "technique_count": 70,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1115"
+        ],
+        "witness_technique_names": [
+          "Clipboard Data"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--a1f5df89-ec82-45ef-b229-4ca6a407dc4f",
+        "name": "Outer Space",
+        "technique_count": 8,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1585.003"
+        ],
+        "witness_technique_names": [
+          "Cloud Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--81e89fb4-8d07-4d8a-82f4-bf084f9d5d53",
+        "name": "Pikabot Distribution February 2024",
+        "technique_count": 4,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1059.007",
+          "T1059.001"
+        ],
+        "witness_technique_names": [
+          "JavaScript",
+          "PowerShell"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--e7511089-1076-4a3b-984d-1a0a8afe31e9",
+        "name": "Quad7 Activity",
+        "technique_count": 15,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1090.002"
+        ],
+        "witness_technique_names": [
+          "External Proxy"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--276671b5-5425-48db-ad65-c8c2564a969b",
+        "name": "RedDelta Modified PlugX Infection Chain Operations",
+        "technique_count": 22,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1480"
+        ],
+        "witness_technique_names": [
+          "Execution Guardrails"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--35879bf3-0a21-4cc1-9e42-6de917a22501",
+        "name": "RedPenguin",
+        "technique_count": 26,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1070.007"
+        ],
+        "witness_technique_names": [
+          "Clear Network Connection History and Configurations"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--83e1f587-34da-44cc-b65b-a72479cb1616",
+        "name": "SPACEHOP Activity",
+        "technique_count": 4,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1190",
+          "T1583.003",
+          "T1588.002"
+        ],
+        "witness_technique_names": [
+          "Exploit Public-Facing Application",
+          "Virtual Private Server",
+          "Tool"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--9cea8bec-07c5-422b-84b8-99d3128ce570",
+        "name": "Salesforce Data Exfiltration",
+        "technique_count": 18,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1586.002"
+        ],
+        "witness_technique_names": [
+          "Email Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--57899965-b171-48ed-bbb4-8faffa3d836a",
+        "name": "ShadowRay",
+        "technique_count": 10,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1496.001"
+        ],
+        "witness_technique_names": [
+          "Compute Hijacking"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--1a0576df-df21-4775-843e-844d8a58a94b",
+        "name": "SharePoint ToolShell Exploitation",
+        "technique_count": 35,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1657"
+        ],
+        "witness_technique_names": [
+          "Financial Theft"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--808d6b30-df4e-4341-8248-724da4bac650",
+        "name": "SolarWinds Compromise",
+        "technique_count": 71,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1539"
+        ],
+        "witness_technique_names": [
+          "Steal Web Session Cookie"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--45a98f02-852f-49b2-94c0-c63207bebbbf",
+        "name": "Triton Safety Instrumented System Attack",
+        "technique_count": 10,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1595"
+        ],
+        "witness_technique_names": [
+          "Active Scanning"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--af0ec65a-caa9-40ef-b1c7-21b71fbf3a10",
+        "name": "Versa Director Zero Day Exploitation",
+        "technique_count": 8,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1584.008",
+          "T1587.001"
+        ],
+        "witness_technique_names": [
+          "Network Devices",
+          "Malware"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--57541e3b-657e-463a-a4ab-ca08d7ea9965",
+        "name": "Water Curupira Pikabot Distribution",
+        "technique_count": 10,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1204"
+        ],
+        "witness_technique_names": [
+          "User Execution"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      }
+    ],
+    "minimum_witness_stats": {
+      "min": 1,
+      "mean": 1.25,
+      "median": 1,
+      "max": 3,
+      "max_overall_threshold_for_identifiable_profiles": 3,
+      "identifiable_by_1_count": 39,
+      "identifiable_by_2_count": 50,
+      "identifiable_by_3_count": 51,
+      "identifiable_by_4_count": 51
+    },
+    "hardest_profiles": [
+      {
+        "id": "campaign--83e1f587-34da-44cc-b65b-a72479cb1616",
+        "name": "SPACEHOP Activity",
+        "technique_count": 4,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1190",
+          "T1583.003",
+          "T1588.002"
+        ],
+        "witness_technique_names": [
+          "Exploit Public-Facing Application",
+          "Virtual Private Server",
+          "Tool"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--46421788-b6e1-4256-b351-f8beffd1afba",
+        "name": "2015 Ukraine Electric Power Attack",
+        "technique_count": 17,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.011",
+          "T1136.002"
+        ],
+        "witness_technique_names": [
+          "Rundll32",
+          "Domain Account"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--4603cf2f-06d0-4970-9c5d-5071b08c817f",
+        "name": "Operation Dust Storm",
+        "technique_count": 17,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1218.005"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Mshta"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--712e38c3-a656-426a-9b3b-a6bfb63294c6",
+        "name": "C0021",
+        "technique_count": 15,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.011",
+          "T1027.009"
+        ],
+        "witness_technique_names": [
+          "Rundll32",
+          "Embedded Payloads"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--8d2bc130-89fe-466e-a4f9-6bce6129c2b8",
+        "name": "FunnyDream",
+        "technique_count": 14,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1583.001",
+          "T1049"
+        ],
+        "witness_technique_names": [
+          "Domains",
+          "System Network Connections Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--f9cc545e-b0ef-4b92-8884-a3a4427609f6",
+        "name": "CostaRicto",
+        "technique_count": 10,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1583.001",
+          "T1090.003"
+        ],
+        "witness_technique_names": [
+          "Domains",
+          "Multi-hop Proxy"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--b4e5a4a9-f3be-4631-ba8f-da6ebb067fac",
+        "name": "C0011",
+        "technique_count": 8,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1587.003",
+          "T1204.002"
+        ],
+        "witness_technique_names": [
+          "Digital Certificates",
+          "Malicious File"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--af0ec65a-caa9-40ef-b1c7-21b71fbf3a10",
+        "name": "Versa Director Zero Day Exploitation",
+        "technique_count": 8,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1584.008",
+          "T1587.001"
+        ],
+        "witness_technique_names": [
+          "Network Devices",
+          "Malware"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--c89fa3ff-4773-4daf-8aec-d8f43f10116e",
+        "name": "C0026",
+        "technique_count": 6,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1030"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Data Transfer Size Limits"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "campaign--f494272a-c110-4574-be90-42c4957f7ae7",
+        "name": "FLORAHOX Activity",
+        "technique_count": 6,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1059",
+          "T1090.003"
+        ],
+        "witness_technique_names": [
+          "Command and Scripting Interpreter",
+          "Multi-hop Proxy"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      }
+    ],
+    "impossible_profiles": []
+  },
+  "intrusion_sets": {
+    "label": "intrusion-set",
+    "profile_count": 168,
+    "profile_size_stats": {
+      "min": 1,
+      "mean": 25.96,
+      "median": 17.0,
+      "max": 109
+    },
+    "distinguishable_count": 145,
+    "distinguishable_pct": 86.3,
+    "impossible_count": 23,
+    "impossible_pct": 13.7,
+    "witness_distribution": {
+      "1": 54,
+      "2": 72,
+      "3": 17,
+      "4": 2
+    },
+    "threshold_curve": [
+      {
+        "min_profile_technique_count": 1,
+        "sample_size": 168,
+        "identifiable_count": 145,
+        "identifiable_pct": 86.3,
+        "impossible_count": 23,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 2,
+        "sample_size": 164,
+        "identifiable_count": 145,
+        "identifiable_pct": 88.4,
+        "impossible_count": 19,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 3,
+        "sample_size": 158,
+        "identifiable_count": 145,
+        "identifiable_pct": 91.8,
+        "impossible_count": 13,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 4,
+        "sample_size": 156,
+        "identifiable_count": 144,
+        "identifiable_pct": 92.3,
+        "impossible_count": 12,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 5,
+        "sample_size": 149,
+        "identifiable_count": 142,
+        "identifiable_pct": 95.3,
+        "impossible_count": 7,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 6,
+        "sample_size": 143,
+        "identifiable_count": 137,
+        "identifiable_pct": 95.8,
+        "impossible_count": 6,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 7,
+        "sample_size": 137,
+        "identifiable_count": 133,
+        "identifiable_pct": 97.1,
+        "impossible_count": 4,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 8,
+        "sample_size": 130,
+        "identifiable_count": 128,
+        "identifiable_pct": 98.5,
+        "impossible_count": 2,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 9,
+        "sample_size": 127,
+        "identifiable_count": 125,
+        "identifiable_pct": 98.4,
+        "impossible_count": 2,
+        "max_witness_size": 4
+      },
+      {
+        "min_profile_technique_count": 10,
+        "sample_size": 118,
+        "identifiable_count": 118,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 11,
+        "sample_size": 116,
+        "identifiable_count": 116,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 12,
+        "sample_size": 109,
+        "identifiable_count": 109,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 13,
+        "sample_size": 101,
+        "identifiable_count": 101,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 14,
+        "sample_size": 100,
+        "identifiable_count": 100,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 15,
+        "sample_size": 95,
+        "identifiable_count": 95,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 16,
+        "sample_size": 92,
+        "identifiable_count": 92,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 17,
+        "sample_size": 86,
+        "identifiable_count": 86,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 18,
+        "sample_size": 83,
+        "identifiable_count": 83,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 19,
+        "sample_size": 82,
+        "identifiable_count": 82,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 20,
+        "sample_size": 77,
+        "identifiable_count": 77,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 21,
+        "sample_size": 76,
+        "identifiable_count": 76,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 22,
+        "sample_size": 74,
+        "identifiable_count": 74,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 3
+      },
+      {
+        "min_profile_technique_count": 23,
+        "sample_size": 70,
+        "identifiable_count": 70,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 24,
+        "sample_size": 69,
+        "identifiable_count": 69,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 25,
+        "sample_size": 68,
+        "identifiable_count": 68,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 26,
+        "sample_size": 66,
+        "identifiable_count": 66,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 27,
+        "sample_size": 65,
+        "identifiable_count": 65,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 28,
+        "sample_size": 63,
+        "identifiable_count": 63,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 29,
+        "sample_size": 59,
+        "identifiable_count": 59,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 30,
+        "sample_size": 56,
+        "identifiable_count": 56,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 31,
+        "sample_size": 54,
+        "identifiable_count": 54,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 32,
+        "sample_size": 50,
+        "identifiable_count": 50,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 33,
+        "sample_size": 50,
+        "identifiable_count": 50,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 34,
+        "sample_size": 49,
+        "identifiable_count": 49,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 35,
+        "sample_size": 47,
+        "identifiable_count": 47,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 36,
+        "sample_size": 46,
+        "identifiable_count": 46,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 37,
+        "sample_size": 43,
+        "identifiable_count": 43,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 38,
+        "sample_size": 43,
+        "identifiable_count": 43,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 39,
+        "sample_size": 43,
+        "identifiable_count": 43,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 40,
+        "sample_size": 43,
+        "identifiable_count": 43,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 41,
+        "sample_size": 40,
+        "identifiable_count": 40,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 42,
+        "sample_size": 37,
+        "identifiable_count": 37,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 43,
+        "sample_size": 36,
+        "identifiable_count": 36,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 44,
+        "sample_size": 35,
+        "identifiable_count": 35,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 45,
+        "sample_size": 32,
+        "identifiable_count": 32,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 46,
+        "sample_size": 32,
+        "identifiable_count": 32,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 47,
+        "sample_size": 30,
+        "identifiable_count": 30,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 48,
+        "sample_size": 30,
+        "identifiable_count": 30,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 49,
+        "sample_size": 29,
+        "identifiable_count": 29,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 50,
+        "sample_size": 27,
+        "identifiable_count": 27,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 51,
+        "sample_size": 26,
+        "identifiable_count": 26,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 52,
+        "sample_size": 26,
+        "identifiable_count": 26,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 53,
+        "sample_size": 25,
+        "identifiable_count": 25,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 54,
+        "sample_size": 23,
+        "identifiable_count": 23,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 55,
+        "sample_size": 23,
+        "identifiable_count": 23,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 56,
+        "sample_size": 23,
+        "identifiable_count": 23,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 2
+      },
+      {
+        "min_profile_technique_count": 57,
+        "sample_size": 20,
+        "identifiable_count": 20,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 58,
+        "sample_size": 18,
+        "identifiable_count": 18,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 59,
+        "sample_size": 17,
+        "identifiable_count": 17,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 60,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 61,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 62,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 63,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 64,
+        "sample_size": 16,
+        "identifiable_count": 16,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 65,
+        "sample_size": 14,
+        "identifiable_count": 14,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 66,
+        "sample_size": 14,
+        "identifiable_count": 14,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 67,
+        "sample_size": 13,
+        "identifiable_count": 13,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 68,
+        "sample_size": 12,
+        "identifiable_count": 12,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 69,
+        "sample_size": 11,
+        "identifiable_count": 11,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 70,
+        "sample_size": 11,
+        "identifiable_count": 11,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 71,
+        "sample_size": 10,
+        "identifiable_count": 10,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 72,
+        "sample_size": 10,
+        "identifiable_count": 10,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 73,
+        "sample_size": 10,
+        "identifiable_count": 10,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 74,
+        "sample_size": 10,
+        "identifiable_count": 10,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 75,
+        "sample_size": 10,
+        "identifiable_count": 10,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 76,
+        "sample_size": 10,
+        "identifiable_count": 10,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 77,
+        "sample_size": 9,
+        "identifiable_count": 9,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 78,
+        "sample_size": 9,
+        "identifiable_count": 9,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 79,
+        "sample_size": 8,
+        "identifiable_count": 8,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 80,
+        "sample_size": 6,
+        "identifiable_count": 6,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 81,
+        "sample_size": 6,
+        "identifiable_count": 6,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 82,
+        "sample_size": 5,
+        "identifiable_count": 5,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 83,
+        "sample_size": 4,
+        "identifiable_count": 4,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 84,
+        "sample_size": 4,
+        "identifiable_count": 4,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 85,
+        "sample_size": 4,
+        "identifiable_count": 4,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 86,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 87,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 88,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 89,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 90,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 91,
+        "sample_size": 3,
+        "identifiable_count": 3,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 92,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 93,
+        "sample_size": 2,
+        "identifiable_count": 2,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 94,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 95,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 96,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 97,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 98,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 99,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 100,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 101,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 102,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 103,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 104,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 105,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 106,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 107,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 108,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      },
+      {
+        "min_profile_technique_count": 109,
+        "sample_size": 1,
+        "identifiable_count": 1,
+        "identifiable_pct": 100.0,
+        "impossible_count": 0,
+        "max_witness_size": 1
+      }
+    ],
+    "rows": [
+      {
+        "id": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+        "name": "APT-C-36",
+        "technique_count": 9,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1036.004",
+          "T1571",
+          "T1027"
+        ],
+        "witness_technique_names": [
+          "Masquerade Task or Service",
+          "Non-Standard Port",
+          "Obfuscated Files or Information"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--6a2e693f-24e5-451a-9f88-b36a108e5662",
+        "name": "APT1",
+        "technique_count": 23,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1087.001",
+          "T1584.001"
+        ],
+        "witness_technique_names": [
+          "Local Account",
+          "Domains"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c47f937f-1022-4f42-8525-e7a4779a14cb",
+        "name": "APT12",
+        "technique_count": 5,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1568.003"
+        ],
+        "witness_technique_names": [
+          "DNS Calculation"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--d6e88e18-81e8-4709-82d8-973095da1e70",
+        "name": "APT16",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 9,
+        "blocker_names": [
+          "Daggerfly",
+          "Dragonfly",
+          "Earth Lusca",
+          "Indrik Spider",
+          "Lazarus Group",
+          "Leviathan",
+          "Sandworm Team",
+          "Turla",
+          "Volt Typhoon"
+        ]
+      },
+      {
+        "id": "intrusion-set--090242d7-73fc-4738-af68-20162f7a5aae",
+        "name": "APT17",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 2,
+        "blocker_names": [
+          "Contagious Interview",
+          "Kimsuky"
+        ]
+      },
+      {
+        "id": "intrusion-set--38fd6a28-3353-4f2b-bb2b-459fecd5c648",
+        "name": "APT18",
+        "technique_count": 12,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1071.004",
+          "T1053.002"
+        ],
+        "witness_technique_names": [
+          "DNS",
+          "At"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fe8796a4-2a02-41a0-9d27-7aa1e995feb6",
+        "name": "APT19",
+        "technique_count": 21,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1132.001",
+          "T1059"
+        ],
+        "witness_technique_names": [
+          "Standard Encoding",
+          "Command and Scripting Interpreter"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--bef4c620-0787-42a8-a96d-b7eb6e85917c",
+        "name": "APT28",
+        "technique_count": 91,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1557.004"
+        ],
+        "witness_technique_names": [
+          "Evil Twin"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--899ce53f-13a0-479b-a0e4-67d46e241542",
+        "name": "APT29",
+        "technique_count": 66,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1586.003"
+        ],
+        "witness_technique_names": [
+          "Cloud Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--0bbdf25b-30ff-4894-a1cd-49260d0dd2d9",
+        "name": "APT3",
+        "technique_count": 44,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1110.002"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Password Cracking"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f047ee18-7985-4946-8bfb-4ed754d3a0dd",
+        "name": "APT30",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 73,
+        "blocker_names": [
+          "APT-C-36",
+          "APT12",
+          "APT19",
+          "APT28",
+          "APT29",
+          "APT32",
+          "APT33",
+          "APT37",
+          "APT38",
+          "APT39",
+          "Ajax Security Team",
+          "Andariel",
+          "BITTER",
+          "BRONZE BUTLER",
+          "BlackTech",
+          "CURIUM",
+          "Cobalt Group",
+          "Confucius",
+          "DarkHydrus",
+          "Darkhotel",
+          "Dragonfly",
+          "EXOTIC LILY",
+          "Elderwood",
+          "FIN4",
+          "FIN6",
+          "FIN7",
+          "FIN8",
+          "Ferocious Kitten",
+          "Gallmaker",
+          "Gamaredon Group",
+          "Gorgon Group",
+          "Higaisa",
+          "Inception",
+          "IndigoZebra",
+          "Kimsuky",
+          "Lazarus Group",
+          "LazyScripter",
+          "Leviathan",
+          "Machete",
+          "Malteiro",
+          "Mofang",
+          "Molerats",
+          "Moonstone Sleet",
+          "MuddyWater",
+          "Mustang Panda",
+          "Naikon",
+          "Nomadic Octopus",
+          "OilRig",
+          "PLATINUM",
+          "Patchwork",
+          "RTM",
+          "Rancor",
+          "RedCurl",
+          "Saint Bear",
+          "Sandworm Team",
+          "SideCopy",
+          "Sidewinder",
+          "Silence",
+          "Star Blizzard",
+          "TA2541",
+          "TA459",
+          "TA505",
+          "TA551",
+          "The White Company",
+          "Threat Group-3390",
+          "Tonto Team",
+          "Transparent Tribe",
+          "Tropic Trooper",
+          "WIRTE",
+          "Windshift",
+          "Wizard Spider",
+          "admin@338",
+          "menuPass"
+        ]
+      },
+      {
+        "id": "intrusion-set--247cb30b-955f-42eb-97a5-a89fef69341e",
+        "name": "APT32",
+        "technique_count": 78,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1216.001"
+        ],
+        "witness_technique_names": [
+          "PubPrn"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fbd29c89-18ba-4c2d-b792-51c0adee049f",
+        "name": "APT33",
+        "technique_count": 31,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1132.001",
+          "T1552.006"
+        ],
+        "witness_technique_names": [
+          "Standard Encoding",
+          "Group Policy Preferences"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--4a2ce82e-1a74-468a-a6fb-bbead541383c",
+        "name": "APT37",
+        "technique_count": 29,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1123"
+        ],
+        "witness_technique_names": [
+          "Audio Capture"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+        "name": "APT38",
+        "technique_count": 56,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1565.001"
+        ],
+        "witness_technique_names": [
+          "Stored Data Manipulation"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--44e43fad-ffcb-4210-abcf-eaaed9735f80",
+        "name": "APT39",
+        "technique_count": 53,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1059.010"
+        ],
+        "witness_technique_names": [
+          "AutoHotKey & AutoIT"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--18854f55-ac7c-4634-bd9a-352dd07613b7",
+        "name": "APT41",
+        "technique_count": 82,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1599"
+        ],
+        "witness_technique_names": [
+          "Network Boundary Bridging"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c0291346-defe-48d7-9542-9e074ba1bdfb",
+        "name": "APT42",
+        "technique_count": 31,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1547"
+        ],
+        "witness_technique_names": [
+          "Boot or Logon Autostart Execution"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c1aab4c9-4c34-4f4f-8541-d529e46a07f9",
+        "name": "APT5",
+        "technique_count": 29,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1074.001",
+          "T1562.006"
+        ],
+        "witness_technique_names": [
+          "Local Data Staging",
+          "Indicator Blocking"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--b8137919-38cb-4db0-90f3-437be885faba",
+        "name": "Agrius",
+        "technique_count": 22,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1583",
+          "T1003.002"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Acquire Infrastructure",
+          "Security Account Manager"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fa19de15-6169-428d-9cd6-3ca3d56075b7",
+        "name": "Ajax Security Team",
+        "technique_count": 6,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "OilRig"
+        ]
+      },
+      {
+        "id": "intrusion-set--46bb06cb-f2d9-4b37-8c92-a27e224ad90d",
+        "name": "Akira",
+        "technique_count": 17,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1558"
+        ],
+        "witness_technique_names": [
+          "Steal or Forge Kerberos Tickets"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--39d6890e-7f23-4474-b8ef-e7b0343c5fc8",
+        "name": "Andariel",
+        "technique_count": 12,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1590.005",
+          "T1566.001"
+        ],
+        "witness_technique_names": [
+          "IP Addresses",
+          "Spearphishing Attachment"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--64d5f96a-f121-4d19-89f6-6709f5c49faa",
+        "name": "Aoqin Dragon",
+        "technique_count": 9,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1091",
+          "T1570"
+        ],
+        "witness_technique_names": [
+          "Replication Through Removable Media",
+          "Lateral Tool Transfer"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--14225573-63b5-4e50-ba9a-5fdcaf6a7b4c",
+        "name": "AppleJeus",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 2,
+        "blocker_names": [
+          "INC Ransom",
+          "Kimsuky"
+        ]
+      },
+      {
+        "id": "intrusion-set--64b52e7d-b2c4-4a02-9372-08a463f5dc11",
+        "name": "Aquatic Panda",
+        "technique_count": 35,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1021.004",
+          "T1021"
+        ],
+        "witness_technique_names": [
+          "SSH",
+          "Remote Services"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--a0cb9370-e39b-44d5-9f50-ef78e412b973",
+        "name": "Axiom",
+        "technique_count": 16,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1553"
+        ],
+        "witness_technique_names": [
+          "Subvert Trust Controls"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7f848c02-4d1e-4808-a4ae-4670681370a9",
+        "name": "BITTER",
+        "technique_count": 16,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1559.002",
+          "T1573"
+        ],
+        "witness_technique_names": [
+          "Dynamic Data Exchange",
+          "Encrypted Channel"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--93f52415-0fe4-4d3d-896c-fc9b8e88ab90",
+        "name": "BRONZE BUTLER",
+        "technique_count": 40,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1550.003"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Pass the Ticket"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--9735c036-8ebe-47e9-9c77-b0ae656dab93",
+        "name": "BackdoorDiplomacy",
+        "technique_count": 15,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1574.001",
+          "T1120"
+        ],
+        "witness_technique_names": [
+          "DLL",
+          "Peripheral Device Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--02b16bd6-ae88-417a-8a3f-02c5e166175a",
+        "name": "BlackByte",
+        "technique_count": 49,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003",
+          "T1562"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "Impair Defenses"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--da49b9f1-ca99-443f-9728-0a074db66850",
+        "name": "BlackOasis",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 17,
+        "blocker_names": [
+          "APT-C-36",
+          "APT3",
+          "APT37",
+          "APT41",
+          "BackdoorDiplomacy",
+          "Earth Lusca",
+          "GALLIUM",
+          "Gallmaker",
+          "Gamaredon Group",
+          "Ke3chang",
+          "Kimsuky",
+          "Moonstone Sleet",
+          "Mustang Panda",
+          "RedCurl",
+          "Rocke",
+          "Sandworm Team",
+          "Windshift"
+        ]
+      },
+      {
+        "id": "intrusion-set--6fe8a2a1-a1b0-4af8-953d-4babd329f8f8",
+        "name": "BlackTech",
+        "technique_count": 14,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1588.004",
+          "T1036.002"
+        ],
+        "witness_technique_names": [
+          "Digital Certificates",
+          "Right-to-Left Override"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--73a80fab-2aa3-48e0-a4d0-3a4828200aee",
+        "name": "Blue Mockingbird",
+        "technique_count": 22,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1574.012"
+        ],
+        "witness_technique_names": [
+          "COR_PROFILER"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--3ea7add5-5b8f-45d8-b1f1-905d2729d62a",
+        "name": "CURIUM",
+        "technique_count": 19,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1608.004",
+          "T1048.002"
+        ],
+        "witness_technique_names": [
+          "Drive-by Target",
+          "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--55033a4d-3ffe-46b2-99b4-2c1541e9ce1c",
+        "name": "Carbanak",
+        "technique_count": 9,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "FIN7"
+        ]
+      },
+      {
+        "id": "intrusion-set--8c1f0187-0826-4320-bddc-5f326cfcfe2c",
+        "name": "Chimera",
+        "technique_count": 59,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1110.004"
+        ],
+        "witness_technique_names": [
+          "Credential Stuffing"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--8b1e16f6-e7c8-4b7a-a5df-f81232c13e2f",
+        "name": "Cinnamon Tempest",
+        "technique_count": 19,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1080",
+          "T1543.003"
+        ],
+        "witness_technique_names": [
+          "Taint Shared Content",
+          "Windows Service"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--8f5e8dc7-739d-4f5e-a8a1-a66e004d7063",
+        "name": "Cleaver",
+        "technique_count": 5,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003.001",
+          "T1557.002"
+        ],
+        "witness_technique_names": [
+          "LSASS Memory",
+          "ARP Cache Poisoning"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--dc6fe6ee-04c2-49be-ba3d-f38d2463c02a",
+        "name": "Cobalt Group",
+        "technique_count": 34,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1218.008"
+        ],
+        "witness_technique_names": [
+          "Odbcconf"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--6eded342-33e5-4451-b6b2-e1c62863129f",
+        "name": "Confucius",
+        "technique_count": 19,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1567.002",
+          "T1221"
+        ],
+        "witness_technique_names": [
+          "Exfiltration to Cloud Storage",
+          "Template Injection"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--46599a4a-77ee-4697-9474-2683b6464859",
+        "name": "Contagious Interview",
+        "technique_count": 52,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1588.007"
+        ],
+        "witness_technique_names": [
+          "Artificial Intelligence"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--dcd81c6e-ebf7-4a16-93e0-9a97fa49c88a",
+        "name": "CopyKittens",
+        "technique_count": 8,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.003",
+          "T1090"
+        ],
+        "witness_technique_names": [
+          "Archive via Custom Method",
+          "Proxy"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f3be6240-f68e-47e1-90d2-ad8f3b3bb8a6",
+        "name": "Daggerfly",
+        "technique_count": 17,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.011",
+          "T1587.002"
+        ],
+        "witness_technique_names": [
+          "Rundll32",
+          "Code Signing Certificates"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--8a831aaa-f3e0-47a3-bed8-a9ced744dd12",
+        "name": "Dark Caracal",
+        "technique_count": 12,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1083",
+          "T1218.001",
+          "T1566.003"
+        ],
+        "witness_technique_names": [
+          "File and Directory Discovery",
+          "Compiled HTML File",
+          "Spearphishing via Service"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--6b9ebeb5-20bf-48b0-afb7-988d769a2f01",
+        "name": "DarkHydrus",
+        "technique_count": 7,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1187",
+          "T1564.003"
+        ],
+        "witness_technique_names": [
+          "Forced Authentication",
+          "Hidden Window"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--813636db-3939-4a45-bea9-6113e970c029",
+        "name": "DarkVishnya",
+        "technique_count": 10,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1200"
+        ],
+        "witness_technique_names": [
+          "Hardware Additions"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--9e729a7e-0dd6-4097-95bf-db8d64911383",
+        "name": "Darkhotel",
+        "technique_count": 24,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1056.001",
+          "T1497.002"
+        ],
+        "witness_technique_names": [
+          "Keylogging",
+          "User Activity Based Checks"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--a653431d-6a5e-4600-8ad3-609b5af57064",
+        "name": "Deep Panda",
+        "technique_count": 10,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1546.008",
+          "T1218.010"
+        ],
+        "witness_technique_names": [
+          "Accessibility Features",
+          "Regsvr32"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--1c63d4ec-0a75-4daa-b1df-0d11af3d3cc1",
+        "name": "Dragonfly",
+        "technique_count": 56,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1033",
+          "T1564.002"
+        ],
+        "witness_technique_names": [
+          "System Owner/User Discovery",
+          "Hidden Users"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--129f2f77-1ab2-4c35-bd5e-21260cee92af",
+        "name": "EXOTIC LILY",
+        "technique_count": 15,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1597"
+        ],
+        "witness_technique_names": [
+          "Search Closed Sources"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--cc613a49-9bfa-4e22-98d1-15ffbb03f034",
+        "name": "Earth Lusca",
+        "technique_count": 44,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1547.012"
+        ],
+        "witness_technique_names": [
+          "Print Processors"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--03506554-5f37-4f8f-9ce4-0e9f01a1b484",
+        "name": "Elderwood",
+        "technique_count": 9,
+        "min_witness_size": 4,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1566.002",
+          "T1203",
+          "T1027.002"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Spearphishing Link",
+          "Exploitation for Client Execution",
+          "Software Packing"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--a7f57cc1-4540-4429-823f-f4e56b8473c9",
+        "name": "Ember Bear",
+        "technique_count": 48,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003",
+          "T1491.002"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "External Defacement"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--96e239be-ad99-49eb-b127-3007b8c1bec9",
+        "name": "Equation",
+        "technique_count": 4,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1542.002"
+        ],
+        "witness_technique_names": [
+          "Component Firmware"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--1f0f9a14-11aa-49aa-9174-bcd0eaa979de",
+        "name": "Evilnum",
+        "technique_count": 11,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1059.007",
+          "T1497.001"
+        ],
+        "witness_technique_names": [
+          "JavaScript",
+          "System Checks"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fbe9387f-34e6-4828-ac28-3080020c597b",
+        "name": "FIN10",
+        "technique_count": 11,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1078",
+          "T1570",
+          "T1078.003"
+        ],
+        "witness_technique_names": [
+          "Valid Accounts",
+          "Lateral Tool Transfer",
+          "Local Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fd66436e-4d33-450e-ac4c-f7810f1c85f4",
+        "name": "FIN13",
+        "technique_count": 53,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1565"
+        ],
+        "witness_technique_names": [
+          "Data Manipulation"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--d0b3393b-3bec-4ba3-bda9-199d30db47b6",
+        "name": "FIN4",
+        "technique_count": 12,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1056.001",
+          "T1564.008"
+        ],
+        "witness_technique_names": [
+          "Keylogging",
+          "Email Hiding Rules"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--85403903-15e0-4f9f-9be4-a259ecad4022",
+        "name": "FIN5",
+        "technique_count": 11,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1070.001",
+          "T1090.002",
+          "T1059"
+        ],
+        "witness_technique_names": [
+          "Clear Windows Event Logs",
+          "External Proxy",
+          "Command and Scripting Interpreter"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--2a7914cf-dff3-428d-ab0f-1014d1c28aeb",
+        "name": "FIN6",
+        "technique_count": 40,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1059.007",
+          "T1134"
+        ],
+        "witness_technique_names": [
+          "JavaScript",
+          "Access Token Manipulation"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--3753cc21-2dae-4dfb-8481-d004e74502cc",
+        "name": "FIN7",
+        "technique_count": 67,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1546.011"
+        ],
+        "witness_technique_names": [
+          "Application Shimming"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fd19bd82-1b14-49a1-a176-6cdc46b8a826",
+        "name": "FIN8",
+        "technique_count": 36,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1055.004"
+        ],
+        "witness_technique_names": [
+          "Asynchronous Procedure Call"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--6566aac9-dad8-4332-ae73-20c23bad7f02",
+        "name": "Ferocious Kitten",
+        "technique_count": 6,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1583.001",
+          "T1036.002"
+        ],
+        "witness_technique_names": [
+          "Domains",
+          "Right-to-Left Override"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c21dd6f1-1364-4a70-a1f7-783080ec34ee",
+        "name": "Fox Kitten",
+        "technique_count": 41,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1021.005"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "VNC"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--06a11b7e-2a36-47fe-8d3e-82c265df3258",
+        "name": "GALLIUM",
+        "technique_count": 31,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003.002",
+          "T1583.004"
+        ],
+        "witness_technique_names": [
+          "Security Account Manager",
+          "Server"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f",
+        "name": "GCMAN",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 2,
+        "blocker_names": [
+          "FIN7",
+          "Fox Kitten"
+        ]
+      },
+      {
+        "id": "intrusion-set--c77c5576-ca19-42ed-a36f-4b4486a84133",
+        "name": "GOLD SOUTHFIELD",
+        "technique_count": 9,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1566",
+          "T1195.002"
+        ],
+        "witness_technique_names": [
+          "Phishing",
+          "Compromise Software Supply Chain"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--2fd2be6a-d3a2-4a65-b499-05ea2693abee",
+        "name": "Gallmaker",
+        "technique_count": 6,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1559.002",
+          "T1027"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Dynamic Data Exchange",
+          "Obfuscated Files or Information"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--2e290bfe-93b5-48ce-97d6-edcd6d32b7cf",
+        "name": "Gamaredon Group",
+        "technique_count": 70,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1001"
+        ],
+        "witness_technique_names": [
+          "Data Obfuscation"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--1f21da59-6a13-455b-afd0-d58d0a5a7d27",
+        "name": "Gorgon Group",
+        "technique_count": 16,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1547.009",
+          "T1112"
+        ],
+        "witness_technique_names": [
+          "Shortcut Modification",
+          "Modify Registry"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7331c66a-5601-4d3f-acf6-ad9e3035eb40",
+        "name": "Group5",
+        "technique_count": 4,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 4,
+        "blocker_names": [
+          "APT28",
+          "APT39",
+          "Magic Hound",
+          "OilRig"
+        ]
+      },
+      {
+        "id": "intrusion-set--2688b13e-8e71-405a-9c40-0dee94bddf87",
+        "name": "HAFNIUM",
+        "technique_count": 44,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1592.004"
+        ],
+        "witness_technique_names": [
+          "Client Configurations"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f29b7c5e-2439-42ad-a86f-9f8984fafae3",
+        "name": "HEXANE",
+        "technique_count": 36,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1053.005",
+          "T1583.002"
+        ],
+        "witness_technique_names": [
+          "Scheduled Task",
+          "DNS Server"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--54dfec3e-6464-4f74-9d69-b7c817b7e5a3",
+        "name": "Higaisa",
+        "technique_count": 28,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1029"
+        ],
+        "witness_technique_names": [
+          "Scheduled Transfer"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--cb41e991-65f4-4668-a65f-f4200545b5a1",
+        "name": "INC Ransom",
+        "technique_count": 25,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1047",
+          "T1537"
+        ],
+        "witness_technique_names": [
+          "Windows Management Instrumentation",
+          "Transfer Data to Cloud Account"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--ead23196-d7b6-4ce6-a124-4ab4b67d81bd",
+        "name": "Inception",
+        "technique_count": 22,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1573.001",
+          "T1218.010"
+        ],
+        "witness_technique_names": [
+          "Symmetric Cryptography",
+          "Regsvr32"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--e5603ea8-4c36-40e7-b7af-a077d24fedc1",
+        "name": "IndigoZebra",
+        "technique_count": 7,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 3,
+        "blocker_names": [
+          "APT28",
+          "Kimsuky",
+          "Mustang Panda"
+        ]
+      },
+      {
+        "id": "intrusion-set--01e28736-2ffc-455b-9880-ed4d1407ae07",
+        "name": "Indrik Spider",
+        "technique_count": 33,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1583",
+          "T1590"
+        ],
+        "witness_technique_names": [
+          "Acquire Infrastructure",
+          "Gather Victim Network Information"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--6713ab67-e25b-49cc-808d-2b36d4fbc35c",
+        "name": "Ke3chang",
+        "technique_count": 46,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1558.001"
+        ],
+        "witness_technique_names": [
+          "Golden Ticket"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+        "name": "Kimsuky",
+        "technique_count": 109,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1176.001"
+        ],
+        "witness_technique_names": [
+          "Browser Extensions"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--d8bc9788-4f7d-41a9-9e9d-ee1ea18a8cf7",
+        "name": "LAPSUS$",
+        "technique_count": 43,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1597.002"
+        ],
+        "witness_technique_names": [
+          "Purchase Technical Data"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c93fccb1-e8e8-42cf-ae33-2ad1d183913a",
+        "name": "Lazarus Group",
+        "technique_count": 93,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1574.013"
+        ],
+        "witness_technique_names": [
+          "KernelCallbackTable"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--abc5a1d4-f0dc-49d1-88a1-4a80e478bb03",
+        "name": "LazyScripter",
+        "technique_count": 20,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1071.004",
+          "T1102"
+        ],
+        "witness_technique_names": [
+          "DNS",
+          "Web Service"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--32bca8ff-d900-4877-aa65-d70baa041b74",
+        "name": "Leafminer",
+        "technique_count": 17,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1055.013"
+        ],
+        "witness_technique_names": [
+          "Process Doppelg\u00e4nging"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7113eaa5-ba79-4fb3-b68a-398ee9cd698e",
+        "name": "Leviathan",
+        "technique_count": 50,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003",
+          "T1586.001"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "Social Media Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--88b7dbc2-32d3-4e31-af2f-3fc24e1582d7",
+        "name": "Lotus Blossom",
+        "technique_count": 21,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1539",
+          "T1016.001"
+        ],
+        "witness_technique_names": [
+          "Steal Web Session Cookie",
+          "Internet Connection Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--b7f627e2-0817-4cd5-8d50-e75f8aa85cc6",
+        "name": "LuminousMoth",
+        "technique_count": 28,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1053.005",
+          "T1557.002"
+        ],
+        "witness_technique_names": [
+          "Scheduled Task",
+          "ARP Cache Poisoning"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--38863958-a201-4ce1-9dbe-539b0b6804e0",
+        "name": "Machete",
+        "technique_count": 11,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1036.005",
+          "T1218.007"
+        ],
+        "witness_technique_names": [
+          "Match Legitimate Resource Name or Location",
+          "Msiexec"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f9d6633a-55e6-4adc-9263-6ae080421a13",
+        "name": "Magic Hound",
+        "technique_count": 79,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1016.002"
+        ],
+        "witness_technique_names": [
+          "Wi-Fi Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--bf668120-e9a6-4017-a014-bfc0f5232656",
+        "name": "Malteiro",
+        "technique_count": 12,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1555",
+          "T1657"
+        ],
+        "witness_technique_names": [
+          "Credentials from Password Stores",
+          "Financial Theft"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--918da025-04bd-48af-b6c4-f3e4d1b915eb",
+        "name": "Medusa Group",
+        "technique_count": 57,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1652"
+        ],
+        "witness_technique_names": [
+          "Device Driver Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--bfc5ddb3-4dfb-4278-8928-020e1b3feddd",
+        "name": "Metador",
+        "technique_count": 9,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1588.001",
+          "T1546.003"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Malware",
+          "Windows Management Instrumentation Event Subscription"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--2e5d3a83-fe00-41a5-9b60-237efc84832f",
+        "name": "Moafee",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 7,
+        "blocker_names": [
+          "APT29",
+          "Akira",
+          "BRONZE BUTLER",
+          "Higaisa",
+          "Kimsuky",
+          "Leviathan",
+          "Patchwork"
+        ]
+      },
+      {
+        "id": "intrusion-set--88489675-d216-4884-a98f-49a89fcc1643",
+        "name": "Mofang",
+        "technique_count": 6,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 2,
+        "blocker_names": [
+          "Leviathan",
+          "TA2541"
+        ]
+      },
+      {
+        "id": "intrusion-set--df71bb3b-813c-45eb-a8bc-f2a419837411",
+        "name": "Molerats",
+        "technique_count": 16,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.007",
+          "T1027.015"
+        ],
+        "witness_technique_names": [
+          "Msiexec",
+          "Compression"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--e6db1e55-b199-4b6b-8633-989345ee45e0",
+        "name": "Moonstone Sleet",
+        "technique_count": 30,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1027.009",
+          "T1598.003"
+        ],
+        "witness_technique_names": [
+          "Embedded Payloads",
+          "Spearphishing Link"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--4c4a7846-45d5-4761-8eea-725fa989914c",
+        "name": "Moses Staff",
+        "technique_count": 12,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1587.001",
+          "T1190"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Malware",
+          "Exploit Public-Facing Application"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7251b44b-6072-476c-b8d9-a6e32c355b28",
+        "name": "MoustachedBouncer",
+        "technique_count": 8,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1659"
+        ],
+        "witness_technique_names": [
+          "Content Injection"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+        "name": "MuddyWater",
+        "technique_count": 58,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1137.001"
+        ],
+        "witness_technique_names": [
+          "Office Template Macros"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--420ac20b-f2b9-42b8-aa1a-6d4b72895ca4",
+        "name": "Mustang Panda",
+        "technique_count": 85,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1129"
+        ],
+        "witness_technique_names": [
+          "Shared Modules"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--0d4ac089-ced4-4cc4-a989-174d08e6d030",
+        "name": "Mustard Tempest",
+        "technique_count": 12,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1583.008"
+        ],
+        "witness_technique_names": [
+          "Malvertising"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--2a158b0a-7ef8-43cb-9985-bf34d1e12050",
+        "name": "Naikon",
+        "technique_count": 14,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1137.006"
+        ],
+        "witness_technique_names": [
+          "Add-ins"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fed4f0a2-4347-4530-b0f5-6dfd49b29172",
+        "name": "Nomadic Octopus",
+        "technique_count": 7,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 2,
+        "blocker_names": [
+          "APT28",
+          "APT32"
+        ]
+      },
+      {
+        "id": "intrusion-set--4ca1929c-7d64-4aab-b849-badbfc0c760d",
+        "name": "OilRig",
+        "technique_count": 76,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1137.004"
+        ],
+        "witness_technique_names": [
+          "Outlook Home Page"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--5636b7b3-d99b-4edd-aa05-ee649c1d4ef1",
+        "name": "Orangeworm",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 13,
+        "blocker_names": [
+          "APT28",
+          "APT32",
+          "APT39",
+          "APT41",
+          "BlackByte",
+          "Chimera",
+          "FIN13",
+          "FIN8",
+          "Ke3chang",
+          "Lazarus Group",
+          "Sandworm Team",
+          "Turla",
+          "Wizard Spider"
+        ]
+      },
+      {
+        "id": "intrusion-set--f9c06633-dcff-48a1-8588-759e7cec5694",
+        "name": "PLATINUM",
+        "technique_count": 11,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1056.004"
+        ],
+        "witness_technique_names": [
+          "Credential API Hooking"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--5f3d0238-d058-44a9-8812-3dd1b6741a8c",
+        "name": "POLONIUM",
+        "technique_count": 7,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1090",
+          "T1583.006",
+          "T1199"
+        ],
+        "witness_technique_names": [
+          "Proxy",
+          "Web Services",
+          "Trusted Relationship"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--efed95ba-d7e8-47ff-8c53-99c42426ee7c",
+        "name": "PROMETHIUM",
+        "technique_count": 11,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1587.003",
+          "T1587.002"
+        ],
+        "witness_technique_names": [
+          "Digital Certificates",
+          "Code Signing Certificates"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--17862c7d-9e60-48a0-b48e-da4dc4c3f6b0",
+        "name": "Patchwork",
+        "technique_count": 41,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1033",
+          "T1587.002"
+        ],
+        "witness_technique_names": [
+          "System Owner/User Discovery",
+          "Code Signing Certificates"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fe98767f-9df8-42b9-83c9-004b1dec8647",
+        "name": "PittyTiger",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 33,
+        "blocker_names": [
+          "APT28",
+          "APT29",
+          "APT33",
+          "APT39",
+          "APT41",
+          "Carbanak",
+          "Chimera",
+          "Cinnamon Tempest",
+          "Dragonfly",
+          "FIN10",
+          "FIN5",
+          "FIN6",
+          "FIN7",
+          "FIN8",
+          "GALLIUM",
+          "INC Ransom",
+          "Ke3chang",
+          "LAPSUS$",
+          "Lazarus Group",
+          "Medusa Group",
+          "OilRig",
+          "POLONIUM",
+          "Play",
+          "Sandworm Team",
+          "Scattered Spider",
+          "Sea Turtle",
+          "Silence",
+          "Silent Librarian",
+          "Star Blizzard",
+          "Threat Group-3390",
+          "Volt Typhoon",
+          "Wizard Spider",
+          "menuPass"
+        ]
+      },
+      {
+        "id": "intrusion-set--ecbf507f-6786-4121-a4cc-0fd6a8d3a29d",
+        "name": "Play",
+        "technique_count": 26,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1048"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Exfiltration Over Alternative Protocol"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7ecc3b4f-5cdb-457e-b55a-df376b359446",
+        "name": "Poseidon Group",
+        "technique_count": 8,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003",
+          "T1007"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "System Service Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--5ce5392a-3a6c-4e07-9df3-9b6a9159ac45",
+        "name": "Putter Panda",
+        "technique_count": 4,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "Lazarus Group"
+        ]
+      },
+      {
+        "id": "intrusion-set--c416b28c-103b-4df1-909e-78089a7e0e5f",
+        "name": "RTM",
+        "technique_count": 7,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1219.002",
+          "T1189"
+        ],
+        "witness_technique_names": [
+          "Remote Desktop Software",
+          "Drive-by Compromise"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f40eb8ce-2a74-4e56-89a1-227021410142",
+        "name": "Rancor",
+        "technique_count": 9,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1218.007",
+          "T1546.003"
+        ],
+        "witness_technique_names": [
+          "Msiexec",
+          "Windows Management Instrumentation Event Subscription"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--82323c70-4186-4b61-94f5-b227c3b28e89",
+        "name": "RedCurl",
+        "technique_count": 41,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1552.002"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Credentials in Registry"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--2c40f629-6cf9-4f75-af32-9a98caec24ae",
+        "name": "RedEcho",
+        "technique_count": 5,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1568",
+          "T1571",
+          "T1573.002"
+        ],
+        "witness_technique_names": [
+          "Dynamic Resolution",
+          "Non-Standard Port",
+          "Asymmetric Cryptography"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--44102191-3a31-45f8-acbe-34bdb441d5ad",
+        "name": "Rocke",
+        "technique_count": 36,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1037",
+          "T1055.002"
+        ],
+        "witness_technique_names": [
+          "Boot or Logon Initialization Scripts",
+          "Portable Executable Injection"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--674582ec-51c4-42ce-b409-797239e37a2a",
+        "name": "Saint Bear",
+        "technique_count": 18,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1112",
+          "T1497"
+        ],
+        "witness_technique_names": [
+          "Modify Registry",
+          "Virtualization/Sandbox Evasion"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--1c3dcf91-b859-4aae-a09c-ae26dc8b6390",
+        "name": "Salt Typhoon",
+        "technique_count": 14,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1602.002"
+        ],
+        "witness_technique_names": [
+          "Network Device Configuration Dump"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--381fcf73-60f6-4ab2-9991-6af3cbc35192",
+        "name": "Sandworm Team",
+        "technique_count": 79,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1499"
+        ],
+        "witness_technique_names": [
+          "Endpoint Denial of Service"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c5574ca0-d5a4-490a-b207-e4658e5fd1d7",
+        "name": "Scarlet Mimic",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 4,
+        "blocker_names": [
+          "BRONZE BUTLER",
+          "BlackTech",
+          "Ferocious Kitten",
+          "Ke3chang"
+        ]
+      },
+      {
+        "id": "intrusion-set--44d37b89-a739-4810-9111-0d2617a8939b",
+        "name": "Scattered Spider",
+        "technique_count": 64,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1556.006"
+        ],
+        "witness_technique_names": [
+          "Multi-Factor Authentication"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--56a05d27-4d47-418a-b330-781c5614f202",
+        "name": "Sea Turtle",
+        "technique_count": 27,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1608.003"
+        ],
+        "witness_technique_names": [
+          "Install Digital Certificate"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--03be849d-b5a2-4766-9dda-48976bae5710",
+        "name": "SideCopy",
+        "technique_count": 16,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1204.002",
+          "T1614"
+        ],
+        "witness_technique_names": [
+          "Malicious File",
+          "System Location Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--3fc023b2-c5cc-481d-9c3e-70141ae1a87e",
+        "name": "Sidewinder",
+        "technique_count": 30,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1598.002"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Spearphishing Attachment"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--d13c8a7f-740b-4efa-a232-de7d6bb05321",
+        "name": "Silence",
+        "technique_count": 28,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1106",
+          "T1125"
+        ],
+        "witness_technique_names": [
+          "Native API",
+          "Video Capture"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--90784c1e-4aba-40eb-9adf-7556235e6384",
+        "name": "Silent Librarian",
+        "technique_count": 13,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1114",
+          "T1594"
+        ],
+        "witness_technique_names": [
+          "Email Collection",
+          "Search Victim-Owned Websites"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--76565741-3452-4069-ab08-80c0ea95bbeb",
+        "name": "SilverTerrier",
+        "technique_count": 4,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "Kimsuky"
+        ]
+      },
+      {
+        "id": "intrusion-set--d1acfbb3-647b-4723-9154-800ec119006e",
+        "name": "Sowbug",
+        "technique_count": 9,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1056.001",
+          "T1135",
+          "T1039"
+        ],
+        "witness_technique_names": [
+          "Keylogging",
+          "Network Share Discovery",
+          "Data from Network Shared Drive"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--9b36c218-4d80-4ec6-a68d-cc2886bbe410",
+        "name": "Star Blizzard",
+        "technique_count": 19,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1550.004"
+        ],
+        "witness_technique_names": [
+          "Web Session Cookie"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--894aab42-3371-47b1-8859-a4a074c804c8",
+        "name": "Stealth Falcon",
+        "technique_count": 16,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1573.001",
+          "T1555.004"
+        ],
+        "witness_technique_names": [
+          "Symmetric Cryptography",
+          "Windows Credential Manager"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7b404cd0-3ae9-41d4-90c0-023793d35d97",
+        "name": "Storm-0501",
+        "technique_count": 42,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1098.001"
+        ],
+        "witness_technique_names": [
+          "Additional Cloud Credentials"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--319fd652-edde-46b2-9987-3519493989f5",
+        "name": "Storm-1811",
+        "technique_count": 31,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1585.003"
+        ],
+        "witness_technique_names": [
+          "Cloud Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--277d2f87-2ae5-4730-a3aa-50c1fdff9656",
+        "name": "Strider",
+        "technique_count": 3,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1556.002",
+          "T1564.005"
+        ],
+        "witness_technique_names": [
+          "Password Filter DLL",
+          "Hidden File System"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--5cbe0d3b-6fb1-471f-b591-4b192915116d",
+        "name": "Suckfly",
+        "technique_count": 5,
+        "min_witness_size": 4,
+        "witness_technique_ids": [
+          "T1003",
+          "T1553.002",
+          "T1078",
+          "T1059.003"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "Code Signing",
+          "Valid Accounts",
+          "Windows Command Shell"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--467271fd-47c0-4e90-a3f9-d84f5cf790d0",
+        "name": "TA2541",
+        "technique_count": 28,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1016.001",
+          "T1055.012"
+        ],
+        "witness_technique_names": [
+          "Internet Connection Discovery",
+          "Process Hollowing"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--62a64fd3-aaf7-4d09-a375-d6f8bb118481",
+        "name": "TA459",
+        "technique_count": 5,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 14,
+        "blocker_names": [
+          "APT32",
+          "APT33",
+          "BRONZE BUTLER",
+          "Cobalt Group",
+          "Confucius",
+          "Inception",
+          "Lazarus Group",
+          "Leviathan",
+          "MuddyWater",
+          "Mustang Panda",
+          "OilRig",
+          "Patchwork",
+          "Sandworm Team",
+          "Sidewinder"
+        ]
+      },
+      {
+        "id": "intrusion-set--7eda3dd8-b09b-4705-8090-c2ad9fb8c14d",
+        "name": "TA505",
+        "technique_count": 34,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1059.007",
+          "T1568.001"
+        ],
+        "witness_technique_names": [
+          "JavaScript",
+          "Fast Flux DNS"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--94873029-f950-4268-9cfd-5032e15cb182",
+        "name": "TA551",
+        "technique_count": 14,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1132.001",
+          "T1568.002"
+        ],
+        "witness_technique_names": [
+          "Standard Encoding",
+          "Domain Generation Algorithms"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--13ef3485-70d2-4567-b934-0e83c1eafcf1",
+        "name": "TA577",
+        "technique_count": 6,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1027.009",
+          "T1059.007"
+        ],
+        "witness_technique_names": [
+          "Embedded Payloads",
+          "JavaScript"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--a5cfbc79-316c-42f2-915d-6e8fef4085f8",
+        "name": "TA578",
+        "technique_count": 4,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "Kimsuky"
+        ]
+      },
+      {
+        "id": "intrusion-set--35d1b3be-49d4-42f1-aaa6-ef159c880bca",
+        "name": "TeamTNT",
+        "technique_count": 56,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1613"
+        ],
+        "witness_technique_names": [
+          "Container and Resource Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--6688d679-ccdb-4f12-abf6-c7545dd767a4",
+        "name": "The White Company",
+        "technique_count": 7,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1518.001",
+          "T1070.004",
+          "T1124"
+        ],
+        "witness_technique_names": [
+          "Security Software Discovery",
+          "File Deletion",
+          "System Time Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--d519164e-f5fa-4b8c-a1fb-cf0172ad0983",
+        "name": "Threat Group-1314",
+        "technique_count": 4,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1072",
+          "T1078.002",
+          "T1059.003"
+        ],
+        "witness_technique_names": [
+          "Software Deployment Tools",
+          "Domain Accounts",
+          "Windows Command Shell"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fb366179-766c-4a4a-afa1-52bff1fd601c",
+        "name": "Threat Group-3390",
+        "technique_count": 57,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1070.005"
+        ],
+        "witness_technique_names": [
+          "Network Share Connection Removal"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--d69e568e-9ac8-4c08-b32c-d93b43ba9172",
+        "name": "Thrip",
+        "technique_count": 4,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "Mustang Panda"
+        ]
+      },
+      {
+        "id": "intrusion-set--b516b235-fc7d-4635-aca5-3d33312339c3",
+        "name": "ToddyCat",
+        "technique_count": 25,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1069.002",
+          "T1074.002"
+        ],
+        "witness_technique_names": [
+          "Domain Groups",
+          "Remote Data Staging"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c5b81590-6814-4d2a-8baa-15c4b6c7f960",
+        "name": "Tonto Team",
+        "technique_count": 15,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1003",
+          "T1069.001"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "Local Groups"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--e44e0985-bc65-4a8f-b578-211c858128e3",
+        "name": "Transparent Tribe",
+        "technique_count": 14,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1568",
+          "T1564.001"
+        ],
+        "witness_technique_names": [
+          "Dynamic Resolution",
+          "Hidden Files and Directories"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--56319646-eb6e-41fc-ae53-aadfa7adb924",
+        "name": "Tropic Trooper",
+        "technique_count": 40,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1033",
+          "T1052.001"
+        ],
+        "witness_technique_names": [
+          "System Owner/User Discovery",
+          "Exfiltration over USB"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--7a19ecb1-3c65-4de3-a230-993516aed6a6",
+        "name": "Turla",
+        "technique_count": 68,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1564.012"
+        ],
+        "witness_technique_names": [
+          "File/Path Exclusions"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--461b8e25-8f4a-4ea2-a4a8-e39df7ce6630",
+        "name": "UNC3886",
+        "technique_count": 49,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1675"
+        ],
+        "witness_technique_names": [
+          "ESXi Administration Command"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--e1fc262c-dad2-4b82-abda-5f08dd134971",
+        "name": "Velvet Ant",
+        "technique_count": 22,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1132"
+        ],
+        "witness_technique_names": [
+          "Data Encoding"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--b2e34388-6938-4c59-a702-80dc219e15e3",
+        "name": "Volatile Cedar",
+        "technique_count": 5,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1505.003",
+          "T1595.003"
+        ],
+        "witness_technique_names": [
+          "Web Shell",
+          "Wordlist Scanning"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--174279b4-399f-4ddb-966e-5efedd1dd5f2",
+        "name": "Volt Typhoon",
+        "technique_count": 81,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1592"
+        ],
+        "witness_technique_names": [
+          "Gather Victim Host Information"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f8cb7b36-62ef-4488-8a6d-a7033e3271c1",
+        "name": "WIRTE",
+        "technique_count": 11,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1140",
+          "T1571",
+          "T1218.010"
+        ],
+        "witness_technique_names": [
+          "Deobfuscate/Decode Files or Information",
+          "Non-Standard Port",
+          "Regsvr32"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--be8847e0-9512-45db-895e-f871ab6d3820",
+        "name": "Water Galura",
+        "technique_count": 3,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 2,
+        "blocker_names": [
+          "Medusa Group",
+          "Scattered Spider"
+        ]
+      },
+      {
+        "id": "intrusion-set--b74f909f-8e52-4b69-b770-162bf59a1b4e",
+        "name": "Whitefly",
+        "technique_count": 9,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 1,
+        "blocker_names": [
+          "APT32"
+        ]
+      },
+      {
+        "id": "intrusion-set--4e868dad-682d-4897-b8df-2dc98f46c68a",
+        "name": "Windigo",
+        "technique_count": 7,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1082",
+          "T1090",
+          "T1059"
+        ],
+        "witness_technique_names": [
+          "System Information Discovery",
+          "Proxy",
+          "Command and Scripting Interpreter"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--afec6dc3-a18e-4b62-b1a4-5510e1a498d1",
+        "name": "Windshift",
+        "technique_count": 19,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1047",
+          "T1036.001"
+        ],
+        "witness_technique_names": [
+          "Windows Management Instrumentation",
+          "Invalid Code Signature"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c5947e1c-1cbc-434c-94b8-27c7e3be0fff",
+        "name": "Winnti Group",
+        "technique_count": 6,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1014",
+          "T1553.002",
+          "T1583.001"
+        ],
+        "witness_technique_names": [
+          "Rootkit",
+          "Code Signing",
+          "Domains"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--75a07184-a7e5-4222-95a1-a04dbc96a29c",
+        "name": "Winter Vivern",
+        "technique_count": 27,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1056.003"
+        ],
+        "witness_technique_names": [
+          "Web Portal Capture"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--dd2d9ca6-505b-4860-a604-233685b802c7",
+        "name": "Wizard Spider",
+        "technique_count": 64,
+        "min_witness_size": 1,
+        "witness_technique_ids": [
+          "T1518.002"
+        ],
+        "witness_technique_names": [
+          "Backup Software Discovery"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--4283ae19-69c7-4347-a35e-b56f08eb660b",
+        "name": "ZIRCONIUM",
+        "technique_count": 29,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1033",
+          "T1665"
+        ],
+        "witness_technique_names": [
+          "System Owner/User Discovery",
+          "Hide Infrastructure"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--16ade1aa-0ea1-4bb7-88cc-9079df2ae756",
+        "name": "admin@338",
+        "technique_count": 12,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1204.002",
+          "T1083",
+          "T1069.001"
+        ],
+        "witness_technique_names": [
+          "Malicious File",
+          "File and Directory Discovery",
+          "Local Groups"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--222fbd21-fc4f-4b7e-9f85-0e6e3a76c33f",
+        "name": "menuPass",
+        "technique_count": 46,
+        "min_witness_size": 2,
+        "witness_technique_ids": [
+          "T1056.001",
+          "T1218.004"
+        ],
+        "witness_technique_names": [
+          "Keylogging",
+          "InstallUtil"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      }
+    ],
+    "minimum_witness_stats": {
+      "min": 1,
+      "mean": 1.77,
+      "median": 2,
+      "max": 4,
+      "max_overall_threshold_for_identifiable_profiles": 4,
+      "identifiable_by_1_count": 54,
+      "identifiable_by_2_count": 126,
+      "identifiable_by_3_count": 143,
+      "identifiable_by_4_count": 145
+    },
+    "hardest_profiles": [
+      {
+        "id": "intrusion-set--03506554-5f37-4f8f-9ce4-0e9f01a1b484",
+        "name": "Elderwood",
+        "technique_count": 9,
+        "min_witness_size": 4,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1566.002",
+          "T1203",
+          "T1027.002"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Spearphishing Link",
+          "Exploitation for Client Execution",
+          "Software Packing"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--5cbe0d3b-6fb1-471f-b591-4b192915116d",
+        "name": "Suckfly",
+        "technique_count": 5,
+        "min_witness_size": 4,
+        "witness_technique_ids": [
+          "T1003",
+          "T1553.002",
+          "T1078",
+          "T1059.003"
+        ],
+        "witness_technique_names": [
+          "OS Credential Dumping",
+          "Code Signing",
+          "Valid Accounts",
+          "Windows Command Shell"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--b8137919-38cb-4db0-90f3-437be885faba",
+        "name": "Agrius",
+        "technique_count": 22,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1560.001",
+          "T1583",
+          "T1003.002"
+        ],
+        "witness_technique_names": [
+          "Archive via Utility",
+          "Acquire Infrastructure",
+          "Security Account Manager"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--8a831aaa-f3e0-47a3-bed8-a9ced744dd12",
+        "name": "Dark Caracal",
+        "technique_count": 12,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1083",
+          "T1218.001",
+          "T1566.003"
+        ],
+        "witness_technique_names": [
+          "File and Directory Discovery",
+          "Compiled HTML File",
+          "Spearphishing via Service"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--4c4a7846-45d5-4761-8eea-725fa989914c",
+        "name": "Moses Staff",
+        "technique_count": 12,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1027.013",
+          "T1587.001",
+          "T1190"
+        ],
+        "witness_technique_names": [
+          "Encrypted/Encoded File",
+          "Malware",
+          "Exploit Public-Facing Application"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--16ade1aa-0ea1-4bb7-88cc-9079df2ae756",
+        "name": "admin@338",
+        "technique_count": 12,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1204.002",
+          "T1083",
+          "T1069.001"
+        ],
+        "witness_technique_names": [
+          "Malicious File",
+          "File and Directory Discovery",
+          "Local Groups"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--fbe9387f-34e6-4828-ac28-3080020c597b",
+        "name": "FIN10",
+        "technique_count": 11,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1078",
+          "T1570",
+          "T1078.003"
+        ],
+        "witness_technique_names": [
+          "Valid Accounts",
+          "Lateral Tool Transfer",
+          "Local Accounts"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--85403903-15e0-4f9f-9be4-a259ecad4022",
+        "name": "FIN5",
+        "technique_count": 11,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1070.001",
+          "T1090.002",
+          "T1059"
+        ],
+        "witness_technique_names": [
+          "Clear Windows Event Logs",
+          "External Proxy",
+          "Command and Scripting Interpreter"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--f8cb7b36-62ef-4488-8a6d-a7033e3271c1",
+        "name": "WIRTE",
+        "technique_count": 11,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1140",
+          "T1571",
+          "T1218.010"
+        ],
+        "witness_technique_names": [
+          "Deobfuscate/Decode Files or Information",
+          "Non-Standard Port",
+          "Regsvr32"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      },
+      {
+        "id": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+        "name": "APT-C-36",
+        "technique_count": 9,
+        "min_witness_size": 3,
+        "witness_technique_ids": [
+          "T1036.004",
+          "T1571",
+          "T1027"
+        ],
+        "witness_technique_names": [
+          "Masquerade Task or Service",
+          "Non-Standard Port",
+          "Obfuscated Files or Information"
+        ],
+        "blocker_count": 0,
+        "blocker_names": []
+      }
+    ],
+    "impossible_profiles": [
+      {
+        "id": "intrusion-set--f047ee18-7985-4946-8bfb-4ed754d3a0dd",
+        "name": "APT30",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 73,
+        "blocker_names": [
+          "APT-C-36",
+          "APT12",
+          "APT19",
+          "APT28",
+          "APT29",
+          "APT32",
+          "APT33",
+          "APT37",
+          "APT38",
+          "APT39",
+          "Ajax Security Team",
+          "Andariel",
+          "BITTER",
+          "BRONZE BUTLER",
+          "BlackTech",
+          "CURIUM",
+          "Cobalt Group",
+          "Confucius",
+          "DarkHydrus",
+          "Darkhotel",
+          "Dragonfly",
+          "EXOTIC LILY",
+          "Elderwood",
+          "FIN4",
+          "FIN6",
+          "FIN7",
+          "FIN8",
+          "Ferocious Kitten",
+          "Gallmaker",
+          "Gamaredon Group",
+          "Gorgon Group",
+          "Higaisa",
+          "Inception",
+          "IndigoZebra",
+          "Kimsuky",
+          "Lazarus Group",
+          "LazyScripter",
+          "Leviathan",
+          "Machete",
+          "Malteiro",
+          "Mofang",
+          "Molerats",
+          "Moonstone Sleet",
+          "MuddyWater",
+          "Mustang Panda",
+          "Naikon",
+          "Nomadic Octopus",
+          "OilRig",
+          "PLATINUM",
+          "Patchwork",
+          "RTM",
+          "Rancor",
+          "RedCurl",
+          "Saint Bear",
+          "Sandworm Team",
+          "SideCopy",
+          "Sidewinder",
+          "Silence",
+          "Star Blizzard",
+          "TA2541",
+          "TA459",
+          "TA505",
+          "TA551",
+          "The White Company",
+          "Threat Group-3390",
+          "Tonto Team",
+          "Transparent Tribe",
+          "Tropic Trooper",
+          "WIRTE",
+          "Windshift",
+          "Wizard Spider",
+          "admin@338",
+          "menuPass"
+        ]
+      },
+      {
+        "id": "intrusion-set--fe98767f-9df8-42b9-83c9-004b1dec8647",
+        "name": "PittyTiger",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 33,
+        "blocker_names": [
+          "APT28",
+          "APT29",
+          "APT33",
+          "APT39",
+          "APT41",
+          "Carbanak",
+          "Chimera",
+          "Cinnamon Tempest",
+          "Dragonfly",
+          "FIN10",
+          "FIN5",
+          "FIN6",
+          "FIN7",
+          "FIN8",
+          "GALLIUM",
+          "INC Ransom",
+          "Ke3chang",
+          "LAPSUS$",
+          "Lazarus Group",
+          "Medusa Group",
+          "OilRig",
+          "POLONIUM",
+          "Play",
+          "Sandworm Team",
+          "Scattered Spider",
+          "Sea Turtle",
+          "Silence",
+          "Silent Librarian",
+          "Star Blizzard",
+          "Threat Group-3390",
+          "Volt Typhoon",
+          "Wizard Spider",
+          "menuPass"
+        ]
+      },
+      {
+        "id": "intrusion-set--da49b9f1-ca99-443f-9728-0a074db66850",
+        "name": "BlackOasis",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 17,
+        "blocker_names": [
+          "APT-C-36",
+          "APT3",
+          "APT37",
+          "APT41",
+          "BackdoorDiplomacy",
+          "Earth Lusca",
+          "GALLIUM",
+          "Gallmaker",
+          "Gamaredon Group",
+          "Ke3chang",
+          "Kimsuky",
+          "Moonstone Sleet",
+          "Mustang Panda",
+          "RedCurl",
+          "Rocke",
+          "Sandworm Team",
+          "Windshift"
+        ]
+      },
+      {
+        "id": "intrusion-set--62a64fd3-aaf7-4d09-a375-d6f8bb118481",
+        "name": "TA459",
+        "technique_count": 5,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 14,
+        "blocker_names": [
+          "APT32",
+          "APT33",
+          "BRONZE BUTLER",
+          "Cobalt Group",
+          "Confucius",
+          "Inception",
+          "Lazarus Group",
+          "Leviathan",
+          "MuddyWater",
+          "Mustang Panda",
+          "OilRig",
+          "Patchwork",
+          "Sandworm Team",
+          "Sidewinder"
+        ]
+      },
+      {
+        "id": "intrusion-set--5636b7b3-d99b-4edd-aa05-ee649c1d4ef1",
+        "name": "Orangeworm",
+        "technique_count": 2,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 13,
+        "blocker_names": [
+          "APT28",
+          "APT32",
+          "APT39",
+          "APT41",
+          "BlackByte",
+          "Chimera",
+          "FIN13",
+          "FIN8",
+          "Ke3chang",
+          "Lazarus Group",
+          "Sandworm Team",
+          "Turla",
+          "Wizard Spider"
+        ]
+      },
+      {
+        "id": "intrusion-set--d6e88e18-81e8-4709-82d8-973095da1e70",
+        "name": "APT16",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 9,
+        "blocker_names": [
+          "Daggerfly",
+          "Dragonfly",
+          "Earth Lusca",
+          "Indrik Spider",
+          "Lazarus Group",
+          "Leviathan",
+          "Sandworm Team",
+          "Turla",
+          "Volt Typhoon"
+        ]
+      },
+      {
+        "id": "intrusion-set--2e5d3a83-fe00-41a5-9b60-237efc84832f",
+        "name": "Moafee",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 7,
+        "blocker_names": [
+          "APT29",
+          "Akira",
+          "BRONZE BUTLER",
+          "Higaisa",
+          "Kimsuky",
+          "Leviathan",
+          "Patchwork"
+        ]
+      },
+      {
+        "id": "intrusion-set--7331c66a-5601-4d3f-acf6-ad9e3035eb40",
+        "name": "Group5",
+        "technique_count": 4,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 4,
+        "blocker_names": [
+          "APT28",
+          "APT39",
+          "Magic Hound",
+          "OilRig"
+        ]
+      },
+      {
+        "id": "intrusion-set--c5574ca0-d5a4-490a-b207-e4658e5fd1d7",
+        "name": "Scarlet Mimic",
+        "technique_count": 1,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 4,
+        "blocker_names": [
+          "BRONZE BUTLER",
+          "BlackTech",
+          "Ferocious Kitten",
+          "Ke3chang"
+        ]
+      },
+      {
+        "id": "intrusion-set--e5603ea8-4c36-40e7-b7af-a077d24fedc1",
+        "name": "IndigoZebra",
+        "technique_count": 7,
+        "min_witness_size": null,
+        "witness_technique_ids": [],
+        "witness_technique_names": [],
+        "blocker_count": 3,
+        "blocker_names": [
+          "APT28",
+          "Kimsuky",
+          "Mustang Panda"
+        ]
+      }
+    ]
+  }
+}

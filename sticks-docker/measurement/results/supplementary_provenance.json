@@ -1,0 +1,166 @@
+{
+  "bundle": "sticks/data/stix/enterprise-attack.json",
+  "docker_execution": "sticks-docker/measurement/results/docker_caldera_execution_latest.json",
+  "docker_findings": "sticks-docker/measurement/results/docker_execution_findings_latest.json",
+  "active_attack_patterns": 691,
+  "field_population": {
+    "kill_chain_phases": {
+      "present": 691,
+      "non_empty": 691
+    },
+    "x_mitre_platforms": {
+      "present": 691,
+      "non_empty": 691
+    },
+    "x_mitre_system_requirements": {
+      "present": 0,
+      "non_empty": 0
+    },
+    "x_mitre_detection": {
+      "present": 691,
+      "non_empty": 0
+    },
+    "x_mitre_data_sources": {
+      "present": 0,
+      "non_empty": 0
+    },
+    "x_mitre_permissions_required": {
+      "present": 0,
+      "non_empty": 0
+    }
+  },
+  "itemset_support": [
+    {
+      "size": 1,
+      "max_support": 28,
+      "fraction_pct": 54.9,
+      "itemset": [
+        "T1105"
+      ]
+    },
+    {
+      "size": 2,
+      "max_support": 17,
+      "fraction_pct": 33.3,
+      "itemset": [
+        "T1105",
+        "T1588.002"
+      ]
+    },
+    {
+      "size": 3,
+      "max_support": 10,
+      "fraction_pct": 19.6,
+      "itemset": [
+        "T1105",
+        "T1190",
+        "T1588.002"
+      ]
+    },
+    {
+      "size": 4,
+      "max_support": 7,
+      "fraction_pct": 13.7,
+      "itemset": [
+        "T1005",
+        "T1053.005",
+        "T1059.003",
+        "T1071.001"
+      ]
+    },
+    {
+      "size": 5,
+      "max_support": 6,
+      "fraction_pct": 11.8,
+      "itemset": [
+        "T1005",
+        "T1033",
+        "T1059.003",
+        "T1071.001",
+        "T1588.002"
+      ]
+    }
+  ],
+  "docker_breakdown": [
+    {
+      "operation": "OP001",
+      "adversary": "APT41 DUST",
+      "successful_links": 24,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 24,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP002",
+      "adversary": "C0010",
+      "successful_links": 10,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 10,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP003",
+      "adversary": "C0026",
+      "successful_links": 7,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 7,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP004",
+      "adversary": "CostaRicto",
+      "successful_links": 11,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 11,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP005",
+      "adversary": "Operation MidnightEclipse",
+      "successful_links": 18,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 18,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP006",
+      "adversary": "Outer Space",
+      "successful_links": 9,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 9,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP007",
+      "adversary": "Salesforce Data Exfiltration",
+      "successful_links": 19,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 19,
+      "end_marker": true,
+      "residual_nonzero": 0
+    },
+    {
+      "operation": "OP008",
+      "adversary": "ShadowRay",
+      "successful_links": 11,
+      "failed_links": 0,
+      "pending_links": 0,
+      "chain_count": 11,
+      "end_marker": true,
+      "residual_nonzero": 0
+    }
+  ]
+}

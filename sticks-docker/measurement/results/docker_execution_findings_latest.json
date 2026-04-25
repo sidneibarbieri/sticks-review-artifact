@@ -1,0 +1,196 @@
+{
+  "architecture": {
+    "db_bootstrap_scripts": [
+      "apt41_dust_sutb.sh",
+      "c0010_sutb.sh",
+      "c0026_sutb.sh",
+      "costaricto_sutb.sh",
+      "operation_midnighteclipse_sutb.sh",
+      "outer_space_sutb.sh",
+      "salesforce_data_exfiltration_sutb.sh",
+      "shadowray_sutb.sh"
+    ],
+    "docker_compose": "sticks-docker/docker/docker-compose.yml",
+    "networks": [
+      "local-network",
+      "caldera-kali-network",
+      "kali-nginx-network",
+      "nginx-db-network"
+    ],
+    "nginx_bootstrap_scripts": [
+      "apt41_dust_suta.sh",
+      "c0010_suta.sh",
+      "c0026_suta.sh",
+      "costaricto_suta.sh",
+      "operation_midnighteclipse_suta.sh",
+      "outer_space_suta.sh",
+      "salesforce_data_exfiltration_suta.sh",
+      "shadowray_suta.sh"
+    ],
+    "shared_substrate_model": true
+  },
+  "execution": {
+    "effective_quiescent_seconds": 120,
+    "explicit_end_markers": 8,
+    "operations_total": 8,
+    "operations_with_failed_links": 0,
+    "operations_with_pending_links": 0,
+    "operations_with_progress": 8,
+    "operations_with_zero_steps_and_nonzero_chain": 8,
+    "operations_without_failed_links": 8,
+    "per_operation": [
+      {
+        "adversary_name": "APT41 DUST",
+        "blocking_command": "echo \"END OF APT 41 DUST\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF APT 41 DUST",
+        "chain_count": 24,
+        "failed_links": 0,
+        "name": "OP001",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 24
+      },
+      {
+        "adversary_name": "C0010",
+        "blocking_command": "echo \"END OF C0010\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF C0010",
+        "chain_count": 10,
+        "failed_links": 0,
+        "name": "OP002",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 10
+      },
+      {
+        "adversary_name": "C0026",
+        "blocking_command": "echo \"END OF C0026\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF C0026",
+        "chain_count": 7,
+        "failed_links": 0,
+        "name": "OP003",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 7
+      },
+      {
+        "adversary_name": "CostaRicto",
+        "blocking_command": "echo \"END OF COSTARICTO\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF COSTARICTO",
+        "chain_count": 11,
+        "failed_links": 0,
+        "name": "OP004",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 11
+      },
+      {
+        "adversary_name": "Operation MidnightEclipse",
+        "blocking_command": "echo \"END OF OPERATION MIDNIGHT ECLIPSE\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF OPERATION MIDNIGHT ECLIPSE",
+        "chain_count": 18,
+        "failed_links": 0,
+        "name": "OP005",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 18
+      },
+      {
+        "adversary_name": "Outer Space",
+        "blocking_command": "echo \"END OF OUTER SPACE\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF OUTER SPACE",
+        "chain_count": 9,
+        "failed_links": 0,
+        "name": "OP006",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 9
+      },
+      {
+        "adversary_name": "Salesforce Data Exfiltration",
+        "blocking_command": "echo \"END OF SALESFORCE DATA EXFILTRATION\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF SALESFORCE DATA EXFILTRATION",
+        "chain_count": 19,
+        "failed_links": 0,
+        "name": "OP007",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 19
+      },
+      {
+        "adversary_name": "ShadowRay",
+        "blocking_command": "echo \"END OF SHADOWRAY\"",
+        "blocking_status": 0,
+        "blocking_technique_id": "T1529",
+        "blocking_technique_name": "END OF SHADOWRAY",
+        "chain_count": 11,
+        "failed_links": 0,
+        "name": "OP008",
+        "nonzero_links": [],
+        "pending_links": 0,
+        "state": "running",
+        "step_count": 0,
+        "successful_links": 11
+      }
+    ],
+    "poll_timeout_reached": false,
+    "quiescent_plateau_reached": true,
+    "total_failed_links": 0,
+    "total_pending_links": 0,
+    "total_successful_links": 109
+  },
+  "paper_takeaways": [
+    "The Docker artifact executes all curated campaigns inside one shared pre-composed substrate, not one isolated SUT per campaign.",
+    "For this legacy Caldera path, executed work is visible in operation.chain even when operation.steps remains empty.",
+    "Reproducibility depends on runtime repair outside the frozen artifact: missing executable bits, missing Caldera conf files, and host-aware bootstrap adjustments are required for clean replay on a fresh ARM64 host.",
+    "All curated campaigns progressed. 0 record at least one non-zero link status, 0 still have a pending tail under the observed window, and 8 reach explicit end markers.",
+    "The legacy artifact demonstrates partial procedural enactment on a shared laboratory environment, not independent push-button replay of fully isolated campaigns."
+  ],
+  "runtime_reproducibility": {
+    "architecture_patches": [
+      ".docker/caldera/Dockerfile",
+      ".docker/kali/Dockerfile"
+    ],
+    "generated_conf_files": [
+      ".docker/caldera/conf/agents.yml",
+      ".docker/caldera/conf/payloads.yml"
+    ],
+    "prepared_runtime_root": "docker-context",
+    "repaired_script_count": 29,
+    "reset_directories": [
+      "kali-data",
+      ".docker/db/dbdata"
+    ]
+  },
+  "sources": {
+    "execution_report": "sticks-docker/measurement/results/docker_caldera_execution_latest.json",
+    "runtime_report": "sticks-docker/measurement/results/docker_runtime_context_latest.json"
+  }
+}

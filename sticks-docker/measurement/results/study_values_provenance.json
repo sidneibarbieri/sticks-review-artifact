@@ -1,0 +1,416 @@
+{
+  "bundle_path": "sticks/data/stix/enterprise-attack.json",
+  "macro_values": {
+    "nCampaignsTotal": "52",
+    "nCampaigns": "51",
+    "nIntrusionSets": "172",
+    "nRelationships": "17270",
+    "nAttackPatternObjects": "691",
+    "nTechniquesAnalysis": "691",
+    "nComposedObjects": "24772",
+    "campaignCoveragePct": "43.0",
+    "campaignCoverageUnusedPct": "57.0",
+    "campaignTechniqueCount": "297",
+    "intrusionSetCoveragePct": "70.6",
+    "intrusionSetTechniqueCount": "488",
+    "sharedTechniqueCount": "268",
+    "campaignOnlyCount": "29",
+    "intrusionSetOnlyCount": "220",
+    "unusedTechniqueCount": "174",
+    "campaignOnlyPct": "4.2",
+    "sharedPct": "38.8",
+    "intrusionSetOnlyPct": "31.8",
+    "unusedPct": "25.2",
+    "topTechniqueId": "T1105",
+    "topTechniqueLabel": "Ingress Tool Transfer",
+    "topTechniqueInCampaigns": "28",
+    "topTechniquePct": "55",
+    "nIntrusionSetsWithTechniques": "168",
+    "intrusionSetWithTechniquesPct": "97.7",
+    "nIntrusionSetsEmpty": "4",
+    "intrusionSetEmptyPct": "2.3",
+    "intrusionSetTechRefs": "4362",
+    "intrusionSetTechAvg": "26.0",
+    "nPlatformAgnosticTechniques": "32",
+    "nTranslatableTechniques": "659",
+    "nCaseStudyCampaigns": "2",
+    "caseStudyRunsEach": "10",
+    "silhouetteScore": "0.05",
+    "silhouetteBaselineMean": "-0.01",
+    "silhouetteBaselineStd": "0.01",
+    "lcsLengthMean": "2.8",
+    "lcsLengthMedian": "2.0",
+    "lcsLengthMax": "29"
+  },
+  "provenance": {
+    "platform_agnostic_classifier": {
+      "description": "Active top-level ATT&CK techniques without a concrete host platform (Containers, ESXi, Linux, Network Devices, Windows, macOS).",
+      "count": 32,
+      "techniques": [
+        {
+          "technique_id": "T1526",
+          "name": "Cloud Service Discovery",
+          "platforms": [
+            "IaaS",
+            "Identity Provider",
+            "Office Suite",
+            "SaaS"
+          ],
+          "tactics": [
+            "discovery"
+          ]
+        },
+        {
+          "technique_id": "T1530",
+          "name": "Data from Cloud Storage",
+          "platforms": [
+            "IaaS",
+            "Office Suite",
+            "SaaS"
+          ],
+          "tactics": [
+            "collection"
+          ]
+        },
+        {
+          "technique_id": "T1535",
+          "name": "Unused/Unsupported Cloud Regions",
+          "platforms": [
+            "IaaS"
+          ],
+          "tactics": [
+            "defense-evasion"
+          ]
+        },
+        {
+          "technique_id": "T1537",
+          "name": "Transfer Data to Cloud Account",
+          "platforms": [
+            "IaaS",
+            "Office Suite",
+            "SaaS"
+          ],
+          "tactics": [
+            "exfiltration"
+          ]
+        },
+        {
+          "technique_id": "T1538",
+          "name": "Cloud Service Dashboard",
+          "platforms": [
+            "IaaS",
+            "Identity Provider",
+            "Office Suite",
+            "SaaS"
+          ],
+          "tactics": [
+            "discovery"
+          ]
+        },
+        {
+          "technique_id": "T1578",
+          "name": "Modify Cloud Compute Infrastructure",
+          "platforms": [
+            "IaaS"
+          ],
+          "tactics": [
+            "defense-evasion"
+          ]
+        },
+        {
+          "technique_id": "T1580",
+          "name": "Cloud Infrastructure Discovery",
+          "platforms": [
+            "IaaS"
+          ],
+          "tactics": [
+            "discovery"
+          ]
+        },
+        {
+          "technique_id": "T1583",
+          "name": "Acquire Infrastructure",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1584",
+          "name": "Compromise Infrastructure",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1585",
+          "name": "Establish Accounts",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1586",
+          "name": "Compromise Accounts",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1587",
+          "name": "Develop Capabilities",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1588",
+          "name": "Obtain Capabilities",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1589",
+          "name": "Gather Victim Identity Information",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1590",
+          "name": "Gather Victim Network Information",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1591",
+          "name": "Gather Victim Org Information",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1592",
+          "name": "Gather Victim Host Information",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1593",
+          "name": "Search Open Websites/Domains",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1594",
+          "name": "Search Victim-Owned Websites",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1595",
+          "name": "Active Scanning",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1596",
+          "name": "Search Open Technical Databases",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1597",
+          "name": "Search Closed Sources",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1598",
+          "name": "Phishing for Information",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        },
+        {
+          "technique_id": "T1608",
+          "name": "Stage Capabilities",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1619",
+          "name": "Cloud Storage Object Discovery",
+          "platforms": [
+            "IaaS"
+          ],
+          "tactics": [
+            "discovery"
+          ]
+        },
+        {
+          "technique_id": "T1648",
+          "name": "Serverless Execution",
+          "platforms": [
+            "IaaS",
+            "Office Suite",
+            "SaaS"
+          ],
+          "tactics": [
+            "execution"
+          ]
+        },
+        {
+          "technique_id": "T1650",
+          "name": "Acquire Access",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "resource-development"
+          ]
+        },
+        {
+          "technique_id": "T1651",
+          "name": "Cloud Administration Command",
+          "platforms": [
+            "IaaS"
+          ],
+          "tactics": [
+            "execution"
+          ]
+        },
+        {
+          "technique_id": "T1666",
+          "name": "Modify Cloud Resource Hierarchy",
+          "platforms": [
+            "IaaS"
+          ],
+          "tactics": [
+            "defense-evasion"
+          ]
+        },
+        {
+          "technique_id": "T1671",
+          "name": "Cloud Application Integration",
+          "platforms": [
+            "Office Suite",
+            "SaaS"
+          ],
+          "tactics": [
+            "persistence"
+          ]
+        },
+        {
+          "technique_id": "T1677",
+          "name": "Poisoned Pipeline Execution",
+          "platforms": [
+            "SaaS"
+          ],
+          "tactics": [
+            "execution"
+          ]
+        },
+        {
+          "technique_id": "T1681",
+          "name": "Search Threat Vendor Data",
+          "platforms": [
+            "PRE"
+          ],
+          "tactics": [
+            "reconnaissance"
+          ]
+        }
+      ]
+    },
+    "case_studies": [
+      {
+        "display_name": "ShadowRay",
+        "stix_name": "ShadowRay",
+        "stix_type": "campaign",
+        "stix_id": "campaign--57899965-b171-48ed-bbb4-8faffa3d836a",
+        "local_campaign_id": "0.shadowray",
+        "runs": 10,
+        "description_mentions_display_name": true
+      },
+      {
+        "display_name": "Soft Cell",
+        "stix_name": "GALLIUM",
+        "stix_type": "intrusion-set",
+        "stix_id": "intrusion-set--06a11b7e-2a36-47fe-8d3e-82c265df3258",
+        "local_campaign_id": null,
+        "runs": 10,
+        "description_mentions_display_name": true
+      }
+    ],
+    "counts": {
+      "campaign_rows": 52,
+      "campaign_rows_with_techniques": 51,
+      "intrusion_sets": 172,
+      "intrusion_sets_with_techniques": 168,
+      "intrusion_sets_without_techniques": 4,
+      "active_attack_patterns": 691,
+      "uses_relationships": 17270,
+      "total_bundle_objects": 24772
+    }
+  }
+}
